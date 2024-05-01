@@ -1,0 +1,136 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "27ce22b6583378ec004e1eb1cdbd6e06",
+    "packages": [
+        {
+            "name": "lfphp/func",
+            "version": "1.1.71",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sasumi/Func.git",
+                "reference": "d4dbc78f1f28adaef704d356903e63080bf006b7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sasumi/Func/zipball/d4dbc78f1f28adaef704d356903e63080bf006b7",
+                "reference": "d4dbc78f1f28adaef704d356903e63080bf006b7",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "ext-json": "*",
+                "ext-mbstring": "*",
+                "ext-pdo": "*",
+                "php": ">=5.6"
+            },
+            "require-dev": {
+                "ext-ssh2": "*",
+                "jasny/phpdoc-parser": "^1.0"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/array.php",
+                    "src/color.php",
+                    "src/cron.php",
+                    "src/csp.php",
+                    "src/curl.php",
+                    "src/db.php",
+                    "src/env.php",
+                    "src/file.php",
+                    "src/font.php",
+                    "src/html.php",
+                    "src/http.php",
+                    "src/session.php",
+                    "src/sheet.php",
+                    "src/string.php",
+                    "src/time.php",
+                    "src/util.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Sasumi.H",
+                    "email": "cnsasumi@outlook.com",
+                    "homepage": "http://blog.yikepi.com/"
+                }
+            ],
+            "description": "A lite function pack for PHP.",
+            "homepage": "http://blog.yikepi.com/",
+            "keywords": [
+                "function"
+            ],
+            "support": {
+                "issues": "https://github.com/sasumi/Func/issues",
+                "source": "https://github.com/sasumi/Func/tree/1.1.71"
+            },
+            "time": "2024-04-09T05:01:47+00:00"
+        },
+        {
+            "name": "lfphp/plite",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sasumi/PLite.git",
+                "reference": "e81f5d4f197a9f0e56a259493edd2b1d6ddef3c8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sasumi/PLite/zipball/e81f5d4f197a9f0e56a259493edd2b1d6ddef3c8",
+                "reference": "e81f5d4f197a9f0e56a259493edd2b1d6ddef3c8",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "lfphp/func": "^1.1"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "./src/app.php",
+                    "./src/config.php",
+                    "./src/defines.php",
+                    "./src/event.php",
+                    "./src/page.php",
+                    "./src/router.php"
+                ],
+                "psr-4": {
+                    "LFPhp\\PLite\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "sasumi",
+                    "email": "cnsasumi@gmail.com"
+                }
+            ],
+            "description": "php lite web framework",
+            "support": {
+                "issues": "https://github.com/sasumi/PLite/issues",
+                "source": "https://github.com/sasumi/PLite/tree/0.0.49"
+            },
+            "time": "2024-04-15T07:45:57+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "dev",
+    "stability-flags": {
+        "lfphp/plite": 20
+    },
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": [],
+    "plugin-api-version": "2.6.0"
+}

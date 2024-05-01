@@ -1,0 +1,22 @@
+{
+    "name": "lfphp/pls",
+    "description": "plite scaffold",
+    "type": "composer-plugin",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Lfphp\\Pls\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "sasumi",
+            "email": "cnsasumi@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "lfphp/plite": "dev-master",
+        "lfphp/func": "^1.1"
+    }
+}
