@@ -17,6 +17,9 @@
     "minimum-stability": "dev",
     "require": {
         "lfphp/plite": "dev-master",
-        "lfphp/func": "^1.1"
+        "lfphp/func": "^1.1",
+        "composer-plugin-api": "*",
+        "lfphp/porm": "dev-master",
+        "composer/composer": "^2.7@dev"
     }
 }
