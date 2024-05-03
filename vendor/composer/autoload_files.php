@@ -6,9 +6,6 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
-    'a4a119a56e50fbb293281d9a48007e0e' => $vendorDir . '/symfony/polyfill-php80/bootstrap.php',
-    '6e3fae29631ef280660b3cdad06f25a8' => $vendorDir . '/symfony/deprecation-contracts/function.php',
-    '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => $vendorDir . '/symfony/polyfill-mbstring/bootstrap.php',
     'bbf50544e76e6a7818a02a28d5e449fa' => $vendorDir . '/lfphp/func/src/array.php',
     'e743b7ab97548186e9de00316b6d4405' => $vendorDir . '/lfphp/func/src/color.php',
     '6a6c6441f52e3238d94df088bef5e762' => $vendorDir . '/lfphp/func/src/cron.php',
@@ -25,17 +22,5 @@ return array(
     '9fd272e63096bdfab6672831e2fc7fd4' => $vendorDir . '/lfphp/func/src/string.php',
     '38d93b268ce45d4c48e6ed3d8634fb00' => $vendorDir . '/lfphp/func/src/time.php',
     '852afe357795df2e7329c111d2e8b564' => $vendorDir . '/lfphp/func/src/util.php',
-    '320cde22f66dd4f5d3fd621d3e88b98f' => $vendorDir . '/symfony/polyfill-ctype/bootstrap.php',
-    '8825ede83f2f289127722d4e842cf7e8' => $vendorDir . '/symfony/polyfill-intl-grapheme/bootstrap.php',
-    'e69f7f6ee287b969198c3c9d6777bd38' => $vendorDir . '/symfony/polyfill-intl-normalizer/bootstrap.php',
-    '0d59ee240a4cd96ddbb4ff164fccea4d' => $vendorDir . '/symfony/polyfill-php73/bootstrap.php',
-    'b6b991a57620e2fb6b2f66f03fe9ddc2' => $vendorDir . '/symfony/string/Resources/functions.php',
-    'ad155f8f1cf0d418fe49e248db8c661b' => $vendorDir . '/react/promise/src/functions_include.php',
-    '23c18046f52bef3eea034657bafda50f' => $vendorDir . '/symfony/polyfill-php81/bootstrap.php',
-    'c3c106f3aac32d5bbdf38f4dc7302aed' => $vendorDir . '/lfphp/plite/src/app.php',
-    '071990caedc05aeef2f061b42112188b' => $vendorDir . '/lfphp/plite/src/config.php',
-    '0d0c4b096e0f4f0c8bc1dba4f71c079a' => $vendorDir . '/lfphp/plite/src/defines.php',
-    'f5aea0560470b9a708e87ec2e1d1aeb4' => $vendorDir . '/lfphp/plite/src/event.php',
-    '94295dad232e19183e6562b2fc414009' => $vendorDir . '/lfphp/plite/src/page.php',
-    '184e0050df6a067784c7805ddbfe9649' => $vendorDir . '/lfphp/plite/src/router.php',
+    '38373c93f19bc048ada44fb70194010a' => $baseDir . '/src/function.php',
 );

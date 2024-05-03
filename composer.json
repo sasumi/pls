@@ -1,25 +1,26 @@
 {
-    "name": "lfphp/pls",
-    "description": "plite scaffold",
-    "type": "composer-plugin",
-    "license": "MIT",
-    "autoload": {
-        "psr-4": {
-            "Lfphp\\Pls\\": "src/"
-        }
-    },
-    "authors": [
-        {
-            "name": "sasumi",
-            "email": "cnsasumi@gmail.com"
-        }
-    ],
-    "minimum-stability": "dev",
-    "require": {
-        "lfphp/plite": "dev-master",
-        "lfphp/func": "^1.1",
-        "composer-plugin-api": "*",
-        "lfphp/porm": "dev-master",
-        "composer/composer": "^2.7@dev"
-    }
+	"name": "lfphp/pls",
+	"description": "plite scaffold",
+	"type": "composer-plugin",
+	"license": "MIT",
+	"autoload": {
+		"files": [
+			"src/function.php"
+		],
+		"psr-4": {
+			"LFPhp\\Pls\\": "src/"
+		}
+	},
+	"authors": [
+		{
+			"name": "sasumi",
+			"email": "cnsasumi@gmail.com"
+		}
+	],
+	"minimum-stability": "dev",
+	"require": {
+		"lfphp/func": "^1.1",
+		"composer-plugin-api": "*",
+		"lfphp/porm": "dev-master"
+	}
 }
