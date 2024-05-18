@@ -2,7 +2,10 @@
 
 namespace LFPhp\Pls;
 
+use Composer\Composer;
 use Composer\InstalledVersions;
+use Composer\IO\IOInterface;
+use Composer\Plugin\PluginInterface;
 use Composer\Script\Event;
 use LFPhp\Logger\Logger;
 use LFPhp\Logger\LoggerLevel;
@@ -17,7 +20,7 @@ use function LFPhp\PLite\get_app_namespace;
 
 include_once dirname(__DIR__).'/vendor/autoload.php';
 
-class ProjectBuilder {
+class ProjectBuilder implements PluginInterface {
 	const TEMPLATE_PROJECT = __DIR__.'/../template';
 
 	private static $steps = [
@@ -307,5 +310,17 @@ EOT;
 			$file_map[$src_file] = [$target_file, $is_template];
 		}
 		return $file_map;
+	}
+
+	public function activate(Composer $composer, IOInterface $io){
+		// TODO: Implement activate() method.
+	}
+
+	public function deactivate(Composer $composer, IOInterface $io){
+		// TODO: Implement deactivate() method.
+	}
+
+	public function uninstall(Composer $composer, IOInterface $io){
+		// TODO: Implement uninstall() method.
 	}
 }
