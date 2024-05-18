@@ -22,7 +22,9 @@
 		"composer-plugin-api": "*",
 		"lfphp/porm": "*",
 		"lfphp/plite": "^0.0.51",
-		"ext-json": "*"
+		"ext-json": "*",
+		"composer": "*",
+		"composer/composer": "^2.7"
 	},
 	"scripts": {
 		"pls": "LFPhp\\Pls\\ProjectBuilder::start"

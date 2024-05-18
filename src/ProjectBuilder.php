@@ -3,6 +3,7 @@
 namespace LFPhp\Pls;
 
 use Composer\InstalledVersions;
+use Composer\Script\Event;
 use LFPhp\Logger\Logger;
 use LFPhp\Logger\LoggerLevel;
 use LFPhp\Logger\Output\ConsoleOutput;
@@ -30,12 +31,12 @@ class ProjectBuilder {
 		'generateIndexPage' => ['Generate Index'],
 	];
 
-	public static function start(){
+	public static function start(Event $event){
 		Logger::registerGlobal(new ConsoleOutput(), LoggerLevel::DEBUG);
-		$args = array_slice($_SERVER['argv'], 2);
+		$args = $event->getArguments();
 		Logger::debug('Arguments detected: ', $args);
 		$command = array_shift($args);
-		$support_commands = array_keys(self::$steps);
+		$support_commands = array_map('strtolower', array_keys(self::$steps));
 		if(!in_array($command, $support_commands)){
 			self::help();
 		}
