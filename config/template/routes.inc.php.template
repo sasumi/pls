@@ -1,7 +1,0 @@
-<?php
-namespace ${PROJECT_NAMESPACE};
-use ${PROJECT_NAMESPACE}\Http\Controller\Index;
-
-return [
-	'' => Index::class.'@index',
-];

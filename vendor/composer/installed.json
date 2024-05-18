@@ -2,17 +2,17 @@
     "packages": [
         {
             "name": "lfphp/func",
-            "version": "1.2.0",
-            "version_normalized": "1.2.0.0",
+            "version": "1.2.1",
+            "version_normalized": "1.2.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sasumi/Func.git",
-                "reference": "fa60b8546c37bae83ae7f8ceee80f17f82500f80"
+                "reference": "3bf23ef8c2573bbe252a9f40ff2e1ec84cf09b2b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sasumi/Func/zipball/fa60b8546c37bae83ae7f8ceee80f17f82500f80",
-                "reference": "fa60b8546c37bae83ae7f8ceee80f17f82500f80",
+                "url": "https://api.github.com/repos/sasumi/Func/zipball/3bf23ef8c2573bbe252a9f40ff2e1ec84cf09b2b",
+                "reference": "3bf23ef8c2573bbe252a9f40ff2e1ec84cf09b2b",
                 "shasum": ""
             },
             "require": {
@@ -26,7 +26,7 @@
                 "ext-ssh2": "*",
                 "jasny/phpdoc-parser": "^1.0"
             },
-            "time": "2024-05-18T07:27:55+00:00",
+            "time": "2024-05-18T07:58:27+00:00",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -67,7 +67,7 @@
             ],
             "support": {
                 "issues": "https://github.com/sasumi/Func/issues",
-                "source": "https://github.com/sasumi/Func/tree/1.2.0"
+                "source": "https://github.com/sasumi/Func/tree/1.2.1"
             },
             "install-path": "../lfphp/func"
         },
@@ -181,25 +181,24 @@
         },
         {
             "name": "lfphp/plite",
-            "version": "dev-master",
-            "version_normalized": "dev-master",
+            "version": "0.0.51",
+            "version_normalized": "0.0.51.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sasumi/PLite.git",
-                "reference": "e81f5d4f197a9f0e56a259493edd2b1d6ddef3c8"
+                "reference": "2670e547ac5fab130fe758bb74218e6f12928c2d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sasumi/PLite/zipball/e81f5d4f197a9f0e56a259493edd2b1d6ddef3c8",
-                "reference": "e81f5d4f197a9f0e56a259493edd2b1d6ddef3c8",
+                "url": "https://api.github.com/repos/sasumi/PLite/zipball/2670e547ac5fab130fe758bb74218e6f12928c2d",
+                "reference": "2670e547ac5fab130fe758bb74218e6f12928c2d",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*",
                 "lfphp/func": "^1.1"
             },
-            "time": "2024-04-15T07:45:57+00:00",
-            "default-branch": true,
+            "time": "2024-05-18T07:50:41+00:00",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -225,7 +224,7 @@
             "description": "php lite web framework",
             "support": {
                 "issues": "https://github.com/sasumi/PLite/issues",
-                "source": "https://github.com/sasumi/PLite/tree/0.0.49"
+                "source": "https://github.com/sasumi/PLite/tree/0.0.51"
             },
             "install-path": "../lfphp/plite"
         },

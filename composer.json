@@ -17,14 +17,14 @@
 			"email": "cnsasumi@gmail.com"
 		}
 	],
-	"minimum-stability": "dev",
 	"require": {
 		"lfphp/func": "^1.2",
 		"composer-plugin-api": "*",
 		"lfphp/porm": "dev-master",
-		"lfphp/plite": "dev-master"
+		"lfphp/plite": "^0.0.51",
+		"ext-json": "*"
 	},
 	"scripts": {
-		"init-project": "LFPhp\\Pls\\ProjectBuilder::init"
+		"pls": "LFPhp\\Pls\\ProjectBuilder::start"
 	}
 }
