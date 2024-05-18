@@ -28,7 +28,7 @@
 		"ext-json": "*",
 		"composer": "*",
 		"lfphp/logger": "^1.1",
-		"composer/composer": "^2.7"
+		"php": "7.3.5"
 	},
 	"scripts": {
 		"pls": "LFPhp\\Pls\\ProjectBuilder::start"
