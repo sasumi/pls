@@ -284,6 +284,20 @@ function html_tag_progress($value = null, $max = null, $attributes = []){
 }
 
 /**
+ * HTML <img> 标签
+ * @param $src
+ * @param $attributes
+ * @return string
+ */
+function html_tag_img($src, $attributes = [
+	//alt=>''
+	//loading='lazy'
+]){
+	$attributes['src'] = $src;
+	return html_tag('img', $attributes);
+}
+
+/**
  * Html循环滚动进度条
  * alias to htmlProgress
  * @param array $attributes
@@ -746,9 +760,9 @@ function static_version_set(array $patch_config = []){
  */
 function static_version_patch($src, &$matched = false){
 	$config = static_version_set();
-	foreach($config as $k=>$version){
+	foreach($config as $k => $version){
 		$reg = static_version_statement_quote($k);
-		if(preg_match($reg, $src)){
+		if(preg_match($reg, $src) && $version){
 			$matched = true;
 			if(is_callable($version)){
 				return call_user_func($version, $src);

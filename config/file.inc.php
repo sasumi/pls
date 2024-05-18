@@ -1,6 +1,6 @@
 <?php
 
-use function LFPhp\Pls\read_template;
+use function LFPhp\Pls\mixing_template;
 
 return [
 	'file_structure' => [
@@ -21,7 +21,7 @@ return [
 	],
 	'file_template'  => [
 		'$PROJECT_DIR/config/routes.inc.php' => function($project){
-			return read_template('router.inc.php', compact('project'));
+			return mixing_template('router.inc.php', compact('project'));
 		},
 	],
 ];

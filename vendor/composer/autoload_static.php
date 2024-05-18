@@ -23,6 +23,12 @@ class ComposerStaticInitd377d30c66f9f404fb89b7146b089b2e
         '9fd272e63096bdfab6672831e2fc7fd4' => __DIR__ . '/..' . '/lfphp/func/src/string.php',
         '38d93b268ce45d4c48e6ed3d8634fb00' => __DIR__ . '/..' . '/lfphp/func/src/time.php',
         '852afe357795df2e7329c111d2e8b564' => __DIR__ . '/..' . '/lfphp/func/src/util.php',
+        'c3c106f3aac32d5bbdf38f4dc7302aed' => __DIR__ . '/..' . '/lfphp/plite/src/app.php',
+        '071990caedc05aeef2f061b42112188b' => __DIR__ . '/..' . '/lfphp/plite/src/config.php',
+        '0d0c4b096e0f4f0c8bc1dba4f71c079a' => __DIR__ . '/..' . '/lfphp/plite/src/defines.php',
+        'f5aea0560470b9a708e87ec2e1d1aeb4' => __DIR__ . '/..' . '/lfphp/plite/src/event.php',
+        '94295dad232e19183e6562b2fc414009' => __DIR__ . '/..' . '/lfphp/plite/src/page.php',
+        '184e0050df6a067784c7805ddbfe9649' => __DIR__ . '/..' . '/lfphp/plite/src/router.php',
         '38373c93f19bc048ada44fb70194010a' => __DIR__ . '/../..' . '/src/function.php',
     );
 
@@ -31,6 +37,7 @@ class ComposerStaticInitd377d30c66f9f404fb89b7146b089b2e
         array (
             'LFPhp\\Pls\\' => 10,
             'LFPhp\\PORM\\' => 11,
+            'LFPhp\\PLite\\' => 12,
             'LFPhp\\PDODSN\\' => 13,
             'LFPhp\\Logger\\' => 13,
         ),
@@ -44,6 +51,10 @@ class ComposerStaticInitd377d30c66f9f404fb89b7146b089b2e
         'LFPhp\\PORM\\' => 
         array (
             0 => __DIR__ . '/..' . '/lfphp/porm/src',
+        ),
+        'LFPhp\\PLite\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/lfphp/plite/src',
         ),
         'LFPhp\\PDODSN\\' => 
         array (

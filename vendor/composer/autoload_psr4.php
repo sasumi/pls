@@ -8,6 +8,7 @@ $baseDir = dirname($vendorDir);
 return array(
     'LFPhp\\Pls\\' => array($baseDir . '/src'),
     'LFPhp\\PORM\\' => array($vendorDir . '/lfphp/porm/src'),
+    'LFPhp\\PLite\\' => array($vendorDir . '/lfphp/plite/src'),
     'LFPhp\\PDODSN\\' => array($vendorDir . '/lfphp/pdodsn/src'),
     'LFPhp\\Logger\\' => array($vendorDir . '/lfphp/logger/src'),
 );

@@ -9,9 +9,12 @@ const ARG_REQUIRED = 1;
 const ARG_OPTIONAL = 2;
 
 $PLS_DOC = <<<EOT
-Plite project scaffold.
-command pattern: php {$_SERVER['SCRIPT_NAME']} [command] [...params] 
-global parameters:
+Plite Project Scaffold.
+
+Usage:
+command pattern: php {$_SERVER['SCRIPT_NAME']} [command] [...params]
+ 
+Global Parameters:
  -h show help
  -v show verbose
  -y confirm operation as default [yes]
@@ -44,11 +47,10 @@ $command = array_shift($options);
 list($screen_size_width) = get_screen_size() ?: [80];
 
 if(!SUPPORT_COMMAND_DOC[$command]){
-	echo PHP_EOL, $PLS_DOC, PHP_EOL;
-	echo str_repeat('-', $screen_size_width - 1), PHP_EOL;
-	echo 'SUPPORT COMMANDS:', PHP_EOL;
+	echo PHP_EOL, $PLS_DOC, PHP_EOL, PHP_EOL;
+	echo 'Support Commands:', PHP_EOL;
 	foreach(SUPPORT_COMMAND_DOC as $command => $p){
-		echo $command, "\t\t", ($p[0] ?: ''), PHP_EOL;
+		echo $command, "\t", ($p[0] ?: ''), PHP_EOL;
 	}
 	exit;
 }
@@ -57,6 +59,7 @@ $arg_str = join(' ', $options);
 $CMD_SCRIPT = realpath(__DIR__.'/'.$command.'.php');
 $call = "php $CMD_SCRIPT $arg_str";
 
+echo PHP_EOL;
 echo "Exec Command: ", $command, PHP_EOL;
 $ret = shell_exec($call);
 echo $ret;

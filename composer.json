@@ -19,8 +19,12 @@
 	],
 	"minimum-stability": "dev",
 	"require": {
-		"lfphp/func": "^1.1",
+		"lfphp/func": "^1.2",
 		"composer-plugin-api": "*",
-		"lfphp/porm": "dev-master"
+		"lfphp/porm": "dev-master",
+		"lfphp/plite": "dev-master"
+	},
+	"scripts": {
+		"init-project": "LFPhp\\Pls\\ProjectBuilder::init"
 	}
 }
