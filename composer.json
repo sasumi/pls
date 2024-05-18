@@ -20,7 +20,7 @@
 	"require": {
 		"lfphp/func": "^1.2",
 		"composer-plugin-api": "*",
-		"lfphp/porm": "dev-master",
+		"lfphp/porm": "*",
 		"lfphp/plite": "^0.0.51",
 		"ext-json": "*"
 	},

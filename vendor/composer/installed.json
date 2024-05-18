@@ -230,17 +230,17 @@
         },
         {
             "name": "lfphp/porm",
-            "version": "dev-master",
-            "version_normalized": "dev-master",
+            "version": "0.0.58",
+            "version_normalized": "0.0.58.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sasumi/PORM.git",
-                "reference": "a1b5fc447fbb15ec077052948c454a1c14065cd7"
+                "reference": "18072f91234d75ff7c55d5ab8f6b7dd64dabd538"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sasumi/PORM/zipball/a1b5fc447fbb15ec077052948c454a1c14065cd7",
-                "reference": "a1b5fc447fbb15ec077052948c454a1c14065cd7",
+                "url": "https://api.github.com/repos/sasumi/PORM/zipball/18072f91234d75ff7c55d5ab8f6b7dd64dabd538",
+                "reference": "18072f91234d75ff7c55d5ab8f6b7dd64dabd538",
                 "shasum": ""
             },
             "require": {
@@ -256,8 +256,7 @@
             "require-dev": {
                 "phpunit/phpunit": "^9.5"
             },
-            "time": "2024-03-28T07:55:32+00:00",
-            "default-branch": true,
+            "time": "2024-03-28T07:46:03+00:00",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -284,7 +283,7 @@
             ],
             "support": {
                 "issues": "https://github.com/sasumi/PORM/issues",
-                "source": "https://github.com/sasumi/PORM/tree/master"
+                "source": "https://github.com/sasumi/PORM/tree/0.0.58"
             },
             "install-path": "../lfphp/porm"
         }
