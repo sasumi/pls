@@ -17,6 +17,9 @@
 			"email": "cnsasumi@gmail.com"
 		}
 	],
+	"extra": {
+		"class": "LFPhp\\Pls\\PlsPlugin"
+	},
 	"require": {
 		"lfphp/func": "^1.2",
 		"composer-plugin-api": "*",
@@ -24,8 +27,8 @@
 		"lfphp/plite": "^0.0.51",
 		"ext-json": "*",
 		"composer": "*",
-		"composer/composer": "^2.7",
-		"lfphp/logger": "^1.1"
+		"lfphp/logger": "^1.1",
+		"composer/composer": "^2.7"
 	},
 	"scripts": {
 		"pls": "LFPhp\\Pls\\ProjectBuilder::start"
