@@ -3,7 +3,7 @@
         'name' => 'lfphp/pls',
         'pretty_version' => 'dev-master',
         'version' => 'dev-master',
-        'reference' => 'a374ffef38839fe1b55157e274f4351f810febf1',
+        'reference' => '342c7074c14f2c1daf19f197de036fb1342ae98c',
         'type' => 'composer-plugin',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -130,7 +130,7 @@
         'lfphp/pls' => array(
             'pretty_version' => 'dev-master',
             'version' => 'dev-master',
-            'reference' => 'a374ffef38839fe1b55157e274f4351f810febf1',
+            'reference' => '342c7074c14f2c1daf19f197de036fb1342ae98c',
             'type' => 'composer-plugin',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
