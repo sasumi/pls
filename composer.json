@@ -18,16 +18,21 @@
 		}
 	],
 	"extra": {
-		"class": "LFPhp\\Pls\\ProjectBuilder"
+		"class": [
+			"LFPhp\\Pls\\PlsInstaller",
+			"LFPhp\\Pls\\PlsPlugin",
+			"LFPhp\\Pls\\ProjectBuilder"
+		]
 	},
 	"require": {
 		"lfphp/func": "^1.2",
-		"composer-plugin-api": "*",
+		"composer-plugin-api": "^2.0",
 		"lfphp/porm": "*",
 		"lfphp/plite": "^0.0.51",
 		"ext-json": "*",
 		"composer": "*",
-		"lfphp/logger": "^1.1"
+		"lfphp/logger": "^1.1",
+		"composer/composer": "^2.7"
 	},
 	"scripts": {
 		"pls": "LFPhp\\Pls\\ProjectBuilder::start"
