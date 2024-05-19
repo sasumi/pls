@@ -5,67 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="82cfd0af-8525-48fa-9c83-86977bfa521e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/template/tag-base/script/script.inc.php.tpl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/template/tag-crud/public/css/define.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/template/tag-crud/public/css/reset.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/template/tag-crud/public/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/template/tag-crud/public/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/template/tag-crud/public/index.php.tpl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/template/tag-crud/script/crud/controller.tpl.php.tpl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/template/tag-crud/script/crud/create.tpl.php.tpl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/template/tag-crud/script/crud/generate.php.tpl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/template/tag-crud/script/crud/index.tpl.php.tpl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/template/tag-crud/script/crud/info.tpl.php.tpl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/template/tag-crud/script/crud/update.tpl.php.tpl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/template/tag-crud/src/page/404.php.tpl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/template/tag-crud/src/page/5xx.php.tpl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/template/tag-crud/src/page/footer.inc.php.tpl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/template/tag-crud/src/page/header.inc.php.tpl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/template/tag-database/config/app.inc.php.tpl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/template/tag-database/config/database.inc.php.tpl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/template/tag-database/config/routes.inc.php.tpl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/template/tag-fontend/config/static_version.inc.php.tpl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/template/tag-fontend/public/css/define.css.tpl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/template/tag-fontend/public/css/reset.css.tpl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/template/tag-fontend/public/css/style.css.tpl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/template/tag-fontend/public/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/template/tag-fontend/script/cachedump.php.tpl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/template/tag-orm/script/orm/generate.php.tpl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/template/tag-orm/script/orm/model.tpl.php.tpl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/template/tag-orm/script/orm/modelbase.tpl.php.tpl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/template/tag-orm/script/orm/table.tpl.php.tpl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/template/tag-orm/src/Http/Paginate.php.tpl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/pls.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/pls.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template/tag-orm/script/script.inc.php.tpl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ProjectBuilder.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ProjectBuilder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/config/app.inc.php.tpl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/config/database.inc.php.tpl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/config/routes.inc.php.tpl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/doc/README.md.tpl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/public/css/define.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/public/css/reset.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/public/css/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/public/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/public/index.php.tpl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/script/crud/controller.tpl.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/script/crud/create.tpl.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/script/crud/generate.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/script/crud/index.tpl.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/script/crud/info.tpl.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/script/crud/update.tpl.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/script/orm/generate.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/script/orm/model.tpl.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/script/orm/modelbase.tpl.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/script/orm/table.tpl.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/src/page/404.php.tpl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/src/page/5xx.php.tpl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/src/page/footer.inc.php.tpl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/src/page/header.inc.php.tpl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/installed.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/installed.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/tag-base/script/script.inc.php.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/template/tag-crud/script/script.inc.php.tpl" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -138,7 +81,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/template/tag-orm/src/Http" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/template/tag-orm/script" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -152,11 +95,14 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\htdocs\pls\template\tag-orm\script" />
       <recent name="D:\htdocs\pls\template\tag-orm\src\Http" />
       <recent name="D:\htdocs\pls\template" />
       <recent name="D:\htdocs\pls\template\tag-base\script" />
       <recent name="D:\htdocs\pls\template\tag-fontend\script" />
-      <recent name="D:\htdocs\pls\template\tag-fontend\config" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\htdocs\pls\template\tag-crud\script" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -170,7 +116,7 @@
       <workItem from="1716040989437" duration="2872000" />
       <workItem from="1716051426810" duration="9000" />
       <workItem from="1716082553043" duration="7654000" />
-      <workItem from="1716107622792" duration="3329000" />
+      <workItem from="1716107622792" duration="3921000" />
     </task>
     <servers />
   </component>

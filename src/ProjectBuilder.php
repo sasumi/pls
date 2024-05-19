@@ -35,6 +35,7 @@ class ProjectBuilder extends BaseCommand implements PluginInterface {
 		'orm'           => ['generateORM', 'Generate database ORM file'],
 		'index'         => ['generateIndexPage', 'Generate Index controller & page'],
 		'crud'          => ['generateCRUD', 'Generate CRUD(Create, Read, Update, Delete) operation function'],
+		'frontend'      => ['integratedFrontend', 'Generate CRUD(Create, Read, Update, Delete) operation function'],
 	];
 
 	protected function configure(){
@@ -87,6 +88,7 @@ class ProjectBuilder extends BaseCommand implements PluginInterface {
 			'orm',
 			'index',
 			'crud',
+			'frontend'
 		];
 		$step_counter = 1;
 		$total_command = count($steps);
@@ -125,10 +127,10 @@ EOT;
 		$app_root = realpath($r['install_path']);
 		$app_name = get_app_name();
 		$app_namespace = get_app_namespace();
-//
-//		$app_root = dirname(__DIR__).'/test/hello';
-//		$app_name = 'swing/hello';
-//		$app_namespace = 'Swing\\Hello';
+
+		$app_root = dirname(__DIR__).'/test/hello';
+		$app_name = 'swing/hello';
+		$app_namespace = 'Swing\\Hello';
 
 		$app_name_var = str_replace('\\', '', $app_namespace);
 		return [
@@ -143,8 +145,8 @@ EOT;
 	 * 初始化必要的文件
 	 * @return void
 	 */
-	public static function initFile(){
-		$file_structs = self::getTemplateProjectStructure('tab-base');
+	public static function initFile($tag = 'tag-base'){
+		$file_structs = self::getTemplateProjectStructure($tag);
 		foreach($file_structs as $dir){
 			if(!is_dir($dir)){
 				if(!mkdir($dir, 0x777, true)){
@@ -157,7 +159,7 @@ EOT;
 		}
 
 		$overwrite = false;
-		$file_map = self::getTemplateProjectFiles('tag-base');
+		$file_map = self::getTemplateProjectFiles($tag);
 		foreach($file_map as $src_file => [$target_file, $is_tpl]){
 			if(!$overwrite && is_file($target_file)){
 				Logger::debug('Target file exists: '.$target_file);
@@ -184,6 +186,8 @@ EOT;
 	 * @return void
 	 */
 	public static function initDatabase(){
+		self::initFile('tag-database');
+
 		$project_info = self::getProjectInfo();
 		$app_name_var = $project_info['app_name_var'];
 		$app_root = $project_info['app_root'];
@@ -246,7 +250,12 @@ EOT;
 		return $str;
 	}
 
+	public static function generateCRUD(){
+		self::initFile('tag-crud');;
+	}
+
 	public static function generateORM(){
+		self::initFile('tag-orm');
 		$project_info = self::getProjectInfo();
 		$app_name_var = $project_info['app_name_var'];
 		$app_root = $project_info['app_root'];
@@ -293,6 +302,10 @@ EOT;
 	public static function generateIndexPage(){
 	}
 
+	public static function integratedFrontend(){
+		self::initFile('tag-frontend');
+	}
+
 	/**
 	 * @return array
 	 */
@@ -306,6 +319,7 @@ EOT;
 	}
 
 	/**
+	 * @param $tag
 	 * @return array
 	 */
 	private static function getTemplateProjectFiles($tag){
