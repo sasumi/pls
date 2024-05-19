@@ -39,8 +39,8 @@ if($specified_source_id && ucfirst($specified_source_id) !== $specified_source_i
 
 if(!$specified_source_id){
 	$all_db_config = get_config('database');
-	$source_ids = array_map('ucfirst', array_keys($all_db_config));
-	Logger::warning('Using all source id, all source id corrected: '.join(", ", $source_ids));
+	$source_ids = array_keys($all_db_config);
+	Logger::warning('Using all source ids: '.join(", ", $source_ids));
 }else{
 	$source_ids = [$opt['source_id']];
 }

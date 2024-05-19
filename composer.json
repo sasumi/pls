@@ -1,7 +1,7 @@
 {
 	"name": "lfphp/pls",
 	"description": "plite scaffold",
-	"type": "composer-plugin",
+	"type": "library",
 	"license": "MIT",
 	"autoload": {
 		"files": [
@@ -17,19 +17,12 @@
 			"email": "cnsasumi@gmail.com"
 		}
 	],
-	"extra": {
-		"class": [
-			"LFPhp\\Pls\\ProjectBuilderPlugin"
-		]
-	},
 	"require": {
 		"lfphp/func": "^1.2",
-		"composer-plugin-api": "*",
 		"lfphp/porm": "*",
 		"lfphp/plite": "^0.0.51",
 		"ext-json": "*",
-		"lfphp/logger": "^1.1",
-		"composer/composer": "^2.7"
+		"lfphp/logger": "^1.1"
 	},
 	"scripts": {
 		"pls": "LFPhp\\Pls\\ProjectBuilder::start"

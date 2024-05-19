@@ -6,7 +6,6 @@ use LFPhp\Logger\Logger;
 use LFPhp\Logger\LoggerLevel;
 use LFPhp\Logger\Output\FileOutput;
 use LFPhp\PLite\Exception\MessageException;
-use LFPhp\PORM\Exception\Exception as PormException;
 use function LFPhp\Func\array_clear_null;
 use function LFPhp\PLite\register_event;
 use function LFPhp\PLite\start_web;
@@ -18,13 +17,12 @@ use const LFPhp\PLite\EVENT_APP_START;
 use const LFPhp\PLite\EVENT_ROUTER_HIT;
 
 try{
-	const PLITE_APP_ROOT = dirname(__DIR__, 2);
-	include_once __DIR__.'/vendor/autoload.php';
+	define('PLITE_APP_ROOT',dirname(__DIR__, 2));
+	include_once PLITE_APP_ROOT.'/vendor/autoload.php';
 	if(!session_start()){
 		throw new Exception('Session start failure');
 	}
 
-	//	DBDriver::setQueryCacheOn(); 如果后面发现性能有问题，可以考虑针对web模式打开
 	Logger::registerGlobal(new FileOutput(PLITE_APP_ROOT.'/log/runtime.log'), LoggerLevel::DEBUG);
 	Logger::registerGlobal(new FileOutput(PLITE_APP_ROOT.'/log/error.log'), LoggerLevel::WARNING);
 
@@ -37,7 +35,6 @@ try{
 	register_event(EVENT_APP_EXCEPTION, function(Exception $ex){
 		Logger::instance('🎯 PLITE')->error(get_class($ex),
 			"\n[Exception]\n\t", $ex->getMessage(),
-			"\n[Data]\n\t", $data,
 			"\n[Location]\n\t", $ex->getFile().' #'.$ex->getLine(),
 			"\n[Trace]\n\t", str_replace("\n", "\n\t", trim($ex->getTraceAsString())));
 	});
