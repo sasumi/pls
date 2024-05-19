@@ -31,7 +31,8 @@
 		"lfphp/plite": "^0.0.51",
 		"ext-json": "*",
 		"composer": "*",
-		"lfphp/logger": "^1.1"
+		"lfphp/logger": "^1.1",
+		"composer/composer": "^2.7"
 	},
 	"scripts": {
 		"pls": "LFPhp\\Pls\\ProjectBuilder::start"

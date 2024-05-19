@@ -14,7 +14,6 @@ use LFPhp\Logger\Output\ConsoleOutput;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use function LFPhp\Func\console_color;
-use function LFPhp\Func\dump;
 use function LFPhp\Func\glob_recursive;
 use function LFPhp\Func\is_assoc_array;
 use function LFPhp\Func\readline;
