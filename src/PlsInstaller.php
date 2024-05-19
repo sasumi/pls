@@ -19,7 +19,7 @@ class PlsInstaller implements PluginInterface, InstallerInterface {
 		// TODO: Implement deactivate() method.
 	}
 
-	public function uninstall(Composer $composer, IOInterface $io){
+	public function uninstall($composer, $io){
 		// TODO: Implement uninstall() method.
 	}
 
