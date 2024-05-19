@@ -19,14 +19,12 @@
 	],
 	"extra": {
 		"class": [
-			"LFPhp\\Pls\\PlsInstaller",
-			"LFPhp\\Pls\\PlsPlugin",
-			"LFPhp\\Pls\\ProjectBuilder"
+			"LFPhp\\Pls\\ProjectBuilderPlugin"
 		]
 	},
 	"require": {
 		"lfphp/func": "^1.2",
-		"composer-plugin-api": "^2.0",
+		"composer-plugin-api": "*",
 		"lfphp/porm": "*",
 		"lfphp/plite": "^0.0.51",
 		"ext-json": "*",

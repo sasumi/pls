@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="82cfd0af-8525-48fa-9c83-86977bfa521e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/template/tag-orm/script/script.inc.php.tpl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ProjectBuilder.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ProjectBuilder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/tag-base/script/script.inc.php.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/template/tag-crud/script/script.inc.php.tpl" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,7 +113,7 @@
       <workItem from="1716040989437" duration="2872000" />
       <workItem from="1716051426810" duration="9000" />
       <workItem from="1716082553043" duration="7654000" />
-      <workItem from="1716107622792" duration="3921000" />
+      <workItem from="1716107622792" duration="4325000" />
     </task>
     <servers />
   </component>
