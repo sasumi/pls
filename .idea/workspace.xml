@@ -5,7 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="82cfd0af-8525-48fa-9c83-86977bfa521e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template/config/app.inc.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template/config/database.inc.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template/config/routes.inc.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template/doc/README.md.tpl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template/script/crud/controller.tpl.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template/script/crud/create.tpl.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template/script/crud/generate.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template/script/crud/index.tpl.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template/script/crud/info.tpl.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template/script/crud/update.tpl.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template/script/orm/generate.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template/script/orm/model.tpl.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template/script/orm/modelbase.tpl.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template/script/orm/table.tpl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,6 +32,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -66,7 +88,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/template/config" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -80,6 +102,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\htdocs\pls\template\config" />
+      <recent name="D:\htdocs\pls\template\script" />
       <recent name="D:\htdocs\pls\src" />
     </key>
   </component>
@@ -93,11 +117,57 @@
       <updated>1716040987803</updated>
       <workItem from="1716040989437" duration="2872000" />
       <workItem from="1716051426810" duration="9000" />
-      <workItem from="1716082553043" duration="5355000" />
+      <workItem from="1716082553043" duration="7018000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+      </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="7bc8e5fb-80d0-4504-ab0c-1725d2429229">
+          <value>
+            <State>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="roots">
+                    <value>
+                      <list>
+                        <option value="$PROJECT_DIR$" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="7bc8e5fb-80d0-4504-ab0c-1725d2429229" value="TOOL_WINDOW" />
+      </map>
+    </option>
   </component>
 </project>
