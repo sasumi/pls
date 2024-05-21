@@ -3,12 +3,12 @@
 namespace LFPhp\Pls;
 
 use Composer\InstalledVersions;
-use Composer\Script\Event;
 use LFPhp\Logger\Logger;
 use LFPhp\Logger\LoggerLevel;
 use LFPhp\Logger\Output\ConsoleOutput;
 use function LFPhp\Func\array_get;
 use function LFPhp\Func\console_color;
+use function LFPhp\Func\get_all_opt;
 use function LFPhp\Func\glob_recursive;
 use function LFPhp\Func\is_assoc_array;
 use function LFPhp\Func\readline;
@@ -17,10 +17,9 @@ use function LFPhp\Func\underscores_to_pascalcase;
 
 include_once dirname(__DIR__).'/vendor/autoload.php';
 
-class ProjectBuilderPlugin {
+class ProjectBuilder {
 	const TEMPLATE_PROJECT = __DIR__.'/../template';
-
-	private static $composer_event;
+	private static $app_root;
 
 	private static $commands = [
 		'help'          => ['help', 'show this help'],
@@ -34,10 +33,10 @@ class ProjectBuilderPlugin {
 		'frontend'      => ['integratedFrontend', 'Generate CRUD(Create, Read, Update, Delete) operation function'],
 	];
 
-	public static function start(Event $composer_event){
-		self::$composer_event = $composer_event;
+	public static function start(){
 		Logger::registerGlobal(new ConsoleOutput(), LoggerLevel::DEBUG);
-		$args = $composer_event->getArguments();
+
+		$args = get_all_opt();
 		Logger::debug('Arguments detected: ', $args);
 		$command = array_shift($args);
 		$support_commands = array_map('strtolower', array_keys(self::$commands));
@@ -117,10 +116,6 @@ EOT;
 
 	private static function getProjectRoot(){
 		return dirname(self::getVendorDir());
-	}
-
-	private static function getVendorDir(){
-		return rtrim(self::$composer_event->getComposer()->getConfig()->get('vendor-dir'), '/');
 	}
 
 	private static function getComposerInfo($path = ''){

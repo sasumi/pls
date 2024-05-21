@@ -5,7 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="82cfd0af-8525-48fa-9c83-86977bfa521e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/template/tag-base/src/Http/AuthorizeFreeTrait.php.tpl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template/tag-base/src/Http/AuthorizeRequiredTrait.php.tpl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template/tag-base/src/Http/Controller.php.tpl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template/tag-base/src/Http/Paginate.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ProjectBuilderPlugin.php" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,7 +34,6 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/composer.json" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/ProjectBuilder.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -78,7 +82,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/template/tag-orm/script" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/template/tag-base/src/Http" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -92,11 +96,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\htdocs\pls\template\tag-base\src\Http" />
+      <recent name="D:\htdocs\pls\template\tag-orm\src\Business\{app_name_var}" />
       <recent name="D:\htdocs\pls\template\tag-orm\script" />
       <recent name="D:\htdocs\pls\template\tag-orm\src\Http" />
       <recent name="D:\htdocs\pls\template" />
-      <recent name="D:\htdocs\pls\template\tag-base\script" />
-      <recent name="D:\htdocs\pls\template\tag-fontend\script" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\htdocs\pls\template\tag-crud\script" />
@@ -114,6 +118,8 @@
       <workItem from="1716051426810" duration="9000" />
       <workItem from="1716082553043" duration="7654000" />
       <workItem from="1716107622792" duration="4325000" />
+      <workItem from="1716184388646" duration="2000" />
+      <workItem from="1716310871446" duration="212000" />
     </task>
     <servers />
   </component>
