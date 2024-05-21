@@ -12,34 +12,25 @@ $args = get_all_opt();
 array_shift($args);
 $target = trim($args[0]);
 
-\LFPhp\Func\dump($args);
-
 if(!$target || $target === 'help'){
 	echo PHP_EOL.console_color(' PLS Installer ', 'white', 'yellow').PHP_EOL.
 		console_color('Usage:', 'brown'), PHP_EOL.
-		'php install.php <target>', PHP_EOL,PHP_EOL.
+		'php install.php', PHP_EOL,PHP_EOL.
 		console_color('Example:', 'brown'), PHP_EOL.
 		'php install.php /www/projectA';
 	exit;
 }
 
-\LFPhp\Func\dump($_SERVER, 1);
+$target_dir = $_SERVER['PWD'];
 
-if($target[0] !== '/'){
-	\LFPhp\Func\dump($target, 1);
-	$target = $_SERVER['PWD'].$target;
-}
+$tools_root = $target_dir.'/vendor/lfphp/pls/';
 
-if(!realpath($target)){
-	echo console_color('install path no exists:'.$target, 'red');
-	exit;
-}
-\LFPhp\Func\dump($target);
-$target = realpath($target);
+$bath_file = "pls.bat";
+$bat_content = "
+@ECHO OFF
+php %~dp0/vendor/lfphp/pls/run.php %*
+";
+file_put_contents($bath_file, $bat_content);
 
-if(!console_confirm('PLS will install to ['.console_color($target, 'brown'))){
-	exit;
-}
-
-
-\LFPhp\Func\dump($_SERVER['PWD'], 1);
+echo "Script Installed Success: $bath_file ",PHP_EOL,
+"Now you can run [$bath_file] to maintains PLITE Project";

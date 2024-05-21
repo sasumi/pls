@@ -15,11 +15,9 @@ use function LFPhp\Func\readline;
 use function LFPhp\Func\run_command;
 use function LFPhp\Func\underscores_to_pascalcase;
 
-include_once dirname(__DIR__).'/vendor/autoload.php';
-
 class ProjectBuilder {
 	const TEMPLATE_PROJECT = __DIR__.'/../template';
-	private static $app_root;
+	public static $app_root;
 
 	private static $commands = [
 		'help'          => ['help', 'show this help'],
@@ -37,7 +35,9 @@ class ProjectBuilder {
 		Logger::registerGlobal(new ConsoleOutput(), LoggerLevel::DEBUG);
 
 		$args = get_all_opt();
-		Logger::debug('Arguments detected: ', $args);
+		Logger::debug('Arguments detected: ',$args);
+		array_shift($args);
+
 		$command = array_shift($args);
 		$support_commands = array_map('strtolower', array_keys(self::$commands));
 		if(!in_array($command, $support_commands)){
@@ -114,17 +114,12 @@ EOT;
 		}
 	}
 
-	private static function getProjectRoot(){
-		return dirname(self::getVendorDir());
-	}
-
 	private static function getComposerInfo($path = ''){
-		$json = json_decode(file_get_contents(self::getProjectRoot().'/composer.json'), true);
+		$json = json_decode(file_get_contents(self::$app_root.'/composer.json'), true);
 		return array_get($json, $path);
 	}
 
 	public static function getProjectInfo(){
-		$app_root = self::getProjectRoot();
 		$package_name = self::getComposerInfo('name');
 		$ns = explode('/', $package_name);
 		$app_name = join(' ', $ns);
@@ -135,7 +130,7 @@ EOT;
 
 		$app_name_var = str_replace('\\', '', $app_namespace);
 		return [
-			'app_root'      => realpath($app_root),
+			'app_root'      => realpath(self::$app_root),
 			'app_name'      => $app_name,
 			'app_name_var'  => $app_name_var,
 			'app_namespace' => $app_namespace,

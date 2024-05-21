@@ -5,12 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="82cfd0af-8525-48fa-9c83-86977bfa521e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/template/tag-base/src/Http/AuthorizeFreeTrait.php.tpl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/template/tag-base/src/Http/AuthorizeRequiredTrait.php.tpl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/template/tag-base/src/Http/Controller.php.tpl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/template/tag-base/src/Http/Paginate.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ProjectBuilderPlugin.php" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,7 +114,7 @@
       <workItem from="1716082553043" duration="7654000" />
       <workItem from="1716107622792" duration="4325000" />
       <workItem from="1716184388646" duration="2000" />
-      <workItem from="1716310871446" duration="212000" />
+      <workItem from="1716310871446" duration="856000" />
     </task>
     <servers />
   </component>
