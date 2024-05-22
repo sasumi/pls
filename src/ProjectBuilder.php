@@ -8,6 +8,7 @@ use LFPhp\Logger\LoggerLevel;
 use LFPhp\Logger\Output\ConsoleOutput;
 use function LFPhp\Func\array_get;
 use function LFPhp\Func\console_color;
+use function LFPhp\Func\dump;
 use function LFPhp\Func\get_all_opt;
 use function LFPhp\Func\glob_recursive;
 use function LFPhp\Func\is_assoc_array;
@@ -141,7 +142,7 @@ EOT;
 	 * 初始化必要的文件
 	 * @return void
 	 */
-	public static function initFile($tag = 'tag-base'){
+	public static function initFile($tag){
 		$file_structs = self::getTemplateProjectStructure($tag);
 		foreach($file_structs as $dir){
 			if(!is_dir($dir)){
