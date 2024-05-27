@@ -4,7 +4,7 @@
 
 use function LFPhp\Func\console_color;
 
-include_once __DIR__.'/vendor/autoload.php';
+include_once dirname(__DIR__, 2).'/autoload.php';
 
 $bath_file = "pls.bat";
 $bat_content = "
