@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInitd377d30c66f9f404fb89b7146b089b2e
+class ComposerStaticInitefa36236d51578385fac199e1e8c478d
 {
     public static $files = array (
         'bbf50544e76e6a7818a02a28d5e449fa' => __DIR__ . '/..' . '/lfphp/func/src/array.php',
@@ -73,9 +73,9 @@ class ComposerStaticInitd377d30c66f9f404fb89b7146b089b2e
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInitd377d30c66f9f404fb89b7146b089b2e::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInitd377d30c66f9f404fb89b7146b089b2e::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInitd377d30c66f9f404fb89b7146b089b2e::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInitefa36236d51578385fac199e1e8c478d::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInitefa36236d51578385fac199e1e8c478d::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInitefa36236d51578385fac199e1e8c478d::$classMap;
 
         }, null, ClassLoader::class);
     }
