@@ -2,8 +2,6 @@
 
 namespace LFPhp\Pls\command;
 
-use function LFPhp\Func\dump;
-
 abstract class Cmd {
 	abstract public function getCmd();
 
