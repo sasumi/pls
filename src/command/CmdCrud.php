@@ -4,7 +4,6 @@ namespace LFPhp\Pls\command;
 
 use LFPhp\Logger\Logger;
 use LFPhp\Pls\ProjectBuilder;
-use function LFPhp\Func\readline;
 use function LFPhp\Pls\console_confirm;
 
 class CmdCrud extends Cmd {

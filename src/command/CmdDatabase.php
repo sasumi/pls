@@ -40,7 +40,6 @@ class CmdDatabase extends Cmd {
 
 	public function run(){
 		ProjectBuilder::initFile('tag-database');
-
 		$project_info = ProjectBuilder::getProjectInfo();
 		$app_name_var = $project_info['app_name_var'];
 		$database_file = self::getDatabaseConfigFile();
@@ -62,12 +61,12 @@ class CmdDatabase extends Cmd {
 		if(!console_confirm('Setup database config now?')){
 			return;
 		}
-		$host = console_read_required('Enter database host: ', true);
-		$database = console_read_required('Enter which database to use: ', true);
+		$host = console_read_required('Enter database [host]: ', true);
+		$database = console_read_required('Enter which [database] to use: ', true);
 
-		$user = readline('Enter the user for database: ');
+		$user = readline('Enter the [user] for database: ');
 		$user = trim($user);
-		$password = readline('Enter the password for database: ');
+		$password = readline('Enter the [password] for database: ');
 
 		if(!is_file($database_file)){
 			Logger::info('Create database config file: '.$database_file);

@@ -16,5 +16,9 @@ class CmdBase extends Cmd {
 
 	public function run(){
 		ProjectBuilder::initFile('tag-base');
+		ProjectBuilder::addGitIgnore([
+			'/.runtime',
+			'/log',
+		]);
 	}
 }

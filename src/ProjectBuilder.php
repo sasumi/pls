@@ -36,9 +36,29 @@ class ProjectBuilder {
 		}
 	}
 
+	public static function addGitIgnore($rules){
+		$root = self::getProjectRoot();
+		$git_dir = $root.'/.git';
+		$git_ignore_file = $root.'/.git';
+		if(is_dir($git_dir)){
+			$str = '';
+			foreach($rules as $rule){
+				$str .= "\n".$rule;
+			}
+			$org_content = is_file($git_ignore_file) ? trim(file_get_contents($git_ignore_file)) : '';
+			file_put_contents($git_ignore_file, $org_content."\n".$str, FILE_APPEND);
+			return true;
+		}
+		return false;
+	}
+
 	private static function getComposerInfo($path = ''){
 		$json = json_decode(file_get_contents(self::$app_root.'/composer.json'), true);
 		return array_get($json, $path);
+	}
+
+	public static function getProjectRoot(){
+		return self::getProjectInfo()['app_root'];
 	}
 
 	public static function getProjectInfo(){
