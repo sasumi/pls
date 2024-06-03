@@ -51,7 +51,7 @@ class CmdOrm extends Cmd {
 			$source_id = $source_id ?: $source_ids[0];
 			$cmd = "php ./script/orm/generate.php --source_id=$source_id";
 			Logger::info('Start execute command: '.$cmd);
-			echo shell_exec($cmd);
+			echo shell_exec($cmd)."\n";
 		}catch(\Exception $e){
 			Logger::exception($e);
 		}

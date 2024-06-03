@@ -27,7 +27,7 @@ class CmdCrud extends Cmd {
 			$project_info = ProjectBuilder::getProjectInfo();
 			$cmd = "php ./script/crud/generate.php --source_id={$project_info['app_name_var']} --models=".join(',', $models);
 			Logger::info('Start execute command: '.$cmd);
-			echo shell_exec($cmd);
+			echo shell_exec($cmd)."\n";
 		}catch(\Exception $e){
 			Logger::exception($e);
 		}

@@ -20,7 +20,7 @@ use function LFPhp\PLite\url;
 	<h1>{app_name}</h1>
 	<nav>
 		<?php
-			$navs = get_config('nav');
+			$navs = include __DIR__.'/nav.inc.php';
 			foreach($navs as $uri=>$title):?>
 		<li>
 			<a href="<?=url($uri);?>"><?=h($title);?></a>

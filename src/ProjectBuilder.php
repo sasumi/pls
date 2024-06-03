@@ -3,6 +3,7 @@
 namespace LFPhp\Pls;
 
 use Composer\InstalledVersions;
+use Exception;
 use LFPhp\Logger\Logger;
 use LFPhp\Logger\LoggerLevel;
 use LFPhp\Logger\Output\ConsoleOutput;
@@ -36,10 +37,27 @@ class ProjectBuilder {
 		}
 	}
 
+	public static function addConfigItems($config_file, array $lines, $auto_create_file = false){
+		if(!file_exists($config_file)){
+			if(!$auto_create_file){
+				return;
+			}
+			touch($config_file);
+		}
+		$config_Str = trim(file_get_contents($config_file)) ?: '<?php return [];';
+		$last_mq_seg_pos = strpos($config_Str, ']');
+		if($last_mq_seg_pos !== false){
+			$config_Str = substr($config_Str, 0, $last_mq_seg_pos)."\n".join("\n", $lines).substr($config_Str, $last_mq_seg_pos);
+		}else{
+			throw new Exception('config file patch fail, content resolve fail:'.$config_Str);
+		}
+		file_put_contents($config_file, $config_Str);
+	}
+
 	public static function addGitIgnore($rules){
 		$root = self::getProjectRoot();
 		$git_dir = $root.'/.git';
-		$git_ignore_file = $root.'/.git';
+		$git_ignore_file = $root.'/.gitignore';
 		if(is_dir($git_dir)){
 			$str = '';
 			foreach($rules as $rule){
@@ -88,7 +106,7 @@ class ProjectBuilder {
 		foreach($file_structs as $dir){
 			if(!is_dir($dir)){
 				if(!mkdir($dir, 0x777, true)){
-					throw new \Exception('Make directory fail:'.$dir);
+					throw new Exception('Make directory fail:'.$dir);
 				}
 				Logger::info('Directory created:', realpath($dir));
 			}else{
@@ -150,7 +168,7 @@ class ProjectBuilder {
 	private static function getTemplateProjectStructure($tag){
 		$tpl_dir = realpath(self::TEMPLATE_PROJECT."/$tag");
 		if(!$tpl_dir){
-			throw new \Exception('template dir no exist: '.self::TEMPLATE_PROJECT."/$tag");
+			throw new Exception('template dir no exist: '.self::TEMPLATE_PROJECT."/$tag");
 		}
 		$dirs = glob_recursive($tpl_dir."/*", GLOB_ONLYDIR);
 		foreach($dirs as $k => $dir){

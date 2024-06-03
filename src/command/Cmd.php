@@ -35,7 +35,6 @@ abstract class Cmd {
 			CmdBase::class,
 			CmdDatabase::class,
 			CmdOrm::class,
-			CmdIndex::class,
 			CmdCrud::class,
 			CmdFront::class,
 		];

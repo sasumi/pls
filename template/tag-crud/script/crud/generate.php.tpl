@@ -1,6 +1,7 @@
 <?php
 
 use LFPhp\Logger\Logger;
+use LFPhp\Pls\ProjectBuilder;
 use LFPhp\PORM\ORM\Attribute as Attribute;
 use function LFPhp\Func\explode_by;
 use function LFPhp\Func\get_all_opt;
@@ -34,6 +35,7 @@ $types = $opt['types'];
 $models = explode_by(',', $opt['models']);
 Logger::info('Start to generate CRUD');
 
+$nav_lines = [];
 foreach($models as $model){
 	$model_lowercase = strtolower($model);
 	$full_model_class = get_model_class($model);
@@ -76,19 +78,11 @@ foreach($models as $model){
 		}
 		if(!$route_patches){
 			Logger::info("no routes need to patch:\n", join("\n", $route_patches));
-			return;
+		} else {
+			Logger::warning("routes to patch:\n", join("\n", $route_patches));
+			ProjectBuilder::addConfigItems(PLITE_CONFIG_PATH.'/routes.inc.php', $route_patches, true);
+			Logger::warning('route patch success');
 		}
-		Logger::warning("routes to patch:\n", join("\n", $route_patches));
-		$route_str = file_get_contents(PLITE_CONFIG_PATH.'/routes.inc.php');
-		$route_str = $route_str ?: '<?php return [];';
-		$last_mq_seg_pos = strpos($route_str, ']');
-		if($last_mq_seg_pos !== false){
-			$route_str = substr($route_str, 0, $last_mq_seg_pos)."\n".join("\n", $route_patches).substr($route_str, $last_mq_seg_pos);
-		}else{
-			throw new Exception('router patch fail, content resolve fail:'.$route_str);
-		}
-		file_put_contents(PLITE_CONFIG_PATH.'/routes.inc.php', $route_str);
-		Logger::warning('route patch success');
 	}
 
 	Logger::info("\n");
@@ -116,6 +110,14 @@ foreach($models as $model){
 		if($type === 'delete'){
 			continue;
 		}
+
+		if($type === 'index'){
+			$r = $model_lowercase.'/'.$type;
+			$desc = $full_model_class::getModelDesc();
+			Logger::info('nav added', $r, $desc.''.$title);
+			$nav_lines[] = "'$r' => '{$desc}{$title}',";
+		}
+
 		Logger::info("\n");
 		Logger::debug(">>>> $type");
 		$page = $page_path."/$type.php";
@@ -138,6 +140,11 @@ foreach($models as $model){
 	}
 }
 
+if($nav_lines){
+	ProjectBuilder::addConfigItems(PLITE_PAGE_PATH.'/nav.inc.php', $nav_lines);
+} else {
+	Logger::debug('No navs detected');
+}
 echo "ALL DONE";
 
 function get_model_class($class){

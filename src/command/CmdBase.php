@@ -20,5 +20,9 @@ class CmdBase extends Cmd {
 			'/.runtime',
 			'/log',
 		]);
+		$project_info = ProjectBuilder::getProjectInfo();
+		ProjectBuilder::addConfigItems($project_info['app_root'].'/config/routes.inc.php', [
+			"'' => {$project_info['app_namespace']}\Http\Controller\Index::class.'@index',"
+		]);
 	}
 }
