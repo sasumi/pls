@@ -5,8 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="82cfd0af-8525-48fa-9c83-86977bfa521e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/command/Cmd.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/command/CmdBase.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/command/CmdCrud.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/command/CmdDatabase.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/command/CmdEnvConfirm.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/command/CmdFront.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/command/CmdHelp.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/command/CmdIndex.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/command/CmdInit.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/command/CmdOrm.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/pls.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/pls.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ProjectBuilder.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ProjectBuilder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/tag-base/src/page/5xx.php.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/template/tag-base/src/page/5xx.php.tpl" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,33 +49,12 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
-      <path value="$PROJECT_DIR$/vendor/lfphp/plite" />
       <path value="$PROJECT_DIR$/vendor/lfphp/pdodsn" />
-      <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/lfphp/logger" />
       <path value="$PROJECT_DIR$/vendor/lfphp/func" />
       <path value="$PROJECT_DIR$/vendor/lfphp/porm" />
-      <path value="$PROJECT_DIR$/vendor/lfphp/logger" />
-      <path value="$PROJECT_DIR$/vendor/symfony/console" />
-      <path value="$PROJECT_DIR$/vendor/justinrainbow/json-schema" />
-      <path value="$PROJECT_DIR$/vendor/react/promise" />
-      <path value="$PROJECT_DIR$/vendor/seld/signal-handler" />
-      <path value="$PROJECT_DIR$/vendor/seld/phar-utils" />
-      <path value="$PROJECT_DIR$/vendor/seld/jsonlint" />
-      <path value="$PROJECT_DIR$/vendor/symfony/string" />
-      <path value="$PROJECT_DIR$/vendor/psr/log" />
-      <path value="$PROJECT_DIR$/vendor/symfony/service-contracts" />
-      <path value="$PROJECT_DIR$/vendor/psr/container" />
-      <path value="$PROJECT_DIR$/vendor/symfony/process" />
-      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php81" />
-      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php80" />
-      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php73" />
-      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
-      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-normalizer" />
-      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-grapheme" />
-      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-ctype" />
-      <path value="$PROJECT_DIR$/vendor/symfony/finder" />
-      <path value="$PROJECT_DIR$/vendor/symfony/filesystem" />
-      <path value="$PROJECT_DIR$/vendor/symfony/deprecation-contracts" />
+      <path value="$PROJECT_DIR$/vendor/lfphp/plite" />
+      <path value="$PROJECT_DIR$/vendor/composer" />
     </include_path>
   </component>
   <component name="ProjectId" id="2gdwtufywis7Ub90oVNELrS4be6" />
@@ -78,7 +70,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/template/tag-base/public" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -92,11 +84,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\htdocs\pls\src" />
+      <recent name="D:\htdocs\pls" />
       <recent name="D:\htdocs\pls\template\tag-base\public" />
       <recent name="D:\htdocs\pls\template\tag-base\src\Http" />
       <recent name="D:\htdocs\pls\template\tag-orm\src\Business\{app_name_var}" />
-      <recent name="D:\htdocs\pls\template\tag-orm\script" />
-      <recent name="D:\htdocs\pls\template\tag-orm\src\Http" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\htdocs\pls\template\tag-crud\script" />
@@ -118,7 +110,9 @@
       <workItem from="1716310871446" duration="856000" />
       <workItem from="1716390603803" duration="1517000" />
       <workItem from="1716807603176" duration="157000" />
-      <workItem from="1716888686058" duration="22000" />
+      <workItem from="1716888686058" duration="107000" />
+      <workItem from="1717053555372" duration="681000" />
+      <workItem from="1717404199687" duration="1465000" />
     </task>
     <servers />
   </component>
