@@ -2,6 +2,7 @@
 namespace LFPhp\Pls;
 
 use function LFPhp\Func\console_color;
+use function LFPhp\Func\get_all_opt;
 use function LFPhp\Func\readline;
 use function LFPhp\Func\var_export_min;
 
@@ -21,6 +22,11 @@ EOT;
 }
 
 function console_confirm($confirm_msg = ''){
+	$opt = get_all_opt();
+	if(isset($opt['y'])){
+		echo console_color('Msg Auto Confirmed ['.$confirm_msg."]\n", 'brown');
+		return true;
+	}
 	$confirm_msg = $confirm_msg."\nType [y] or [yes] to confirm: ";
 	$input = readline(console_color($confirm_msg, 'yellow'));
 	$input = trim(strtolower($input));

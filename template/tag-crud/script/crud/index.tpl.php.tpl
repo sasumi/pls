@@ -18,7 +18,7 @@ $pk_name = $full_model_class::getPrimaryKey();
 ////////////// template start //////////////
 echo '<?php', PHP_EOL;
 ?>
-use <?=$project_ns;?>\Lib\Paginate;
+use <?=$project_ns;?>\Http\Paginate;
 use function LFPhp\Func\h;
 use function LFPhp\Func\ha;
 use function LFPhp\PLite\include_page;

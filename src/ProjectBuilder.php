@@ -26,8 +26,9 @@ class ProjectBuilder {
 
 		$cmd = array_shift($args);
 		$all_commands = Cmd::getAllCmd();
-		echo "\n".console_color(' PLite Project Builder ', 'white', 'yellow')."\n";
+		echo "\n".str_repeat('=',40)."\n".console_color(' PLite Project Builder ', 'white', 'yellow')."\n";
 		echo "Version: ".InstalledVersions::getVersion('lfphp/pls')."\n";
+		echo str_repeat("-", 40)."\n";
 		if(!$all_commands[$cmd]){
 			Cmd::runCmd('help');
 		}else{
@@ -75,14 +76,21 @@ class ProjectBuilder {
 			}
 		}
 
-		$overwrite = false;
+		$opts = get_all_opt();
+		$overwrite = isset($opts['w']);
 		$file_map = self::getTemplateProjectFiles($tag);
 		foreach($file_map as $src_file => [$target_file, $is_tpl]){
-			if(!$overwrite && is_file($target_file)){
+			$file_exists = is_file($target_file);
+			if(!$overwrite && $file_exists){
 				Logger::debug('Target file exists: '.$target_file);
 				continue;
 			}
-			Logger::info('Build File:', $target_file);
+			if($file_exists){
+				Logger::warning('File Override:', $target_file);
+			} else {
+				Logger::info('Build File:', $target_file);
+			}
+
 			if($is_tpl){
 				$ctn = file_get_contents($src_file);
 				if(strlen($ctn)){
@@ -121,6 +129,9 @@ class ProjectBuilder {
 	 */
 	private static function getTemplateProjectStructure($tag){
 		$tpl_dir = realpath(self::TEMPLATE_PROJECT."/$tag");
+		if(!$tpl_dir){
+			throw new \Exception('template dir no exist: '.self::TEMPLATE_PROJECT."/$tag");
+		}
 		$dirs = glob_recursive($tpl_dir."/*", GLOB_ONLYDIR);
 		foreach($dirs as $k => $dir){
 			$dirs[$k] = self::mixingProjectInfo(str_replace($tpl_dir, '{app_root}', realpath($dir)));

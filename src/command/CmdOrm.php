@@ -4,9 +4,8 @@ namespace LFPhp\Pls\command;
 
 use LFPhp\Logger\Logger;
 use LFPhp\Pls\ProjectBuilder;
-use function LFPhp\Func\is_assoc_array;
+use function LFPhp\Func\dump;
 use function LFPhp\Func\readline;
-use function LFPhp\Func\run_command;
 use function LFPhp\Pls\console_confirm;
 
 class CmdOrm extends Cmd {
@@ -19,32 +18,28 @@ class CmdOrm extends Cmd {
 		return 'Generate database ORM file';
 	}
 
+	public static function getAllModels(){
+		$models = [];
+		$project_info = ProjectBuilder::getProjectInfo();
+		$model_path = "./src/Business/{$project_info['app_name_var']}/Model";
+		$files = glob($model_path.'/*.php');
+		foreach($files as $f){
+			$base_name = basename($f);
+			$models[] = substr($base_name, 0, strpos($base_name, '.'));
+		}
+		if(!$models){
+			throw new \Exception('No models found in dir:'.$model_path);
+		}
+		return $models;
+	}
+
 	public function run(){
 		ProjectBuilder::initFile('tag-orm');
-		$project_info = ProjectBuilder::getProjectInfo();
-		$app_name_var = $project_info['app_name_var'];
-		$app_root = $project_info['app_root'];
-		$database_file = $app_root.'/config/database.inc.php';
-		if(!is_file($database_file)){
-			Logger::warning('No database config file detected: '.$database_file);
-			return;
-		}
 		try{
-			$config = include $database_file;
-			if(empty($config)){
-				Logger::warning('Empty database config in file: '.$database_file, $config);
-				return;
-			}
-			if(!is_assoc_array($config) || count($config) == count($config, COUNT_RECURSIVE)){
-				Logger::error('Wrong config format in file, two dimension in assoc array required. '.$database_file);
-				return;
-			}
-
+			$config = CmdDatabase::getAllDatabaseConfig();
 			if(!console_confirm('Start to generate ORM files?')){
 				return;
 			}
-
-			//todo
 			$source_ids = array_keys($config);
 			$source_id = '';
 			if(count($source_ids) > 1){
@@ -54,12 +49,10 @@ class CmdOrm extends Cmd {
 				}
 			}
 			$source_id = $source_id ?: $source_ids[0];
-			$cmd = 'php '.realpath($app_root.'/script/orm/generate.php')." --source_id=$source_id";
+			$cmd = "php ./script/orm/generate.php --source_id=$source_id";
 			Logger::info('Start execute command: '.$cmd);
-			run_command($cmd, [], true);
-			return;
+			echo shell_exec($cmd);
 		}catch(\Exception $e){
-			LOgger::error('Error while reading database config file: '.$database_file);
 			Logger::exception($e);
 		}
 	}

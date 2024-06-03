@@ -2,7 +2,7 @@
 
 namespace {app_namespace}\Http;
 
-use {app_namespace}\Http\Controller\Auth;
+use {app_namespace}\Http;
 
 trait AuthorizeRequiredTrait {
 	public function onAuthorize(){

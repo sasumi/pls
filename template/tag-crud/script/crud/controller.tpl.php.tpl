@@ -20,14 +20,14 @@ echo '<?php', PHP_EOL;
 ?>
 namespace <?=$project_ns;?>\Http\Controller;
 
-use <?=$project_ns;?>\Http\AuthorizeRequired;
+use <?=$project_ns;?>\Http\AuthorizeRequiredTrait;
 use <?=$project_ns;?>\Http\Controller;
 use <?=$project_ns;?>\Business\<?=$project_var_name;?>\Model\<?=$model;?> as <?=$model_alias;?>;
-use <?=$project_ns;?>\Lib\Paginate;
+use <?=$project_ns;?>\Http\Paginate;
 use function LFPhp\Func\request_in_post;
 
 class <?=$model;?> extends Controller {
-	use AuthorizeRequired;
+	use AuthorizeRequiredTrait;
 
 <?php if($operate_types['index']):?>
 	/**

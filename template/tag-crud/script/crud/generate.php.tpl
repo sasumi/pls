@@ -21,7 +21,7 @@ Generate Source Model
     php {$_SERVER['SCRIPT_NAME']} --models=SysUser [REQUIRED] specifiy models, seperated by comma
     php {$_SERVER['SCRIPT_NAME']} --route=admin/sysuser [OPTIONAL] route rule（exp: --route=sysuser/*，default by lowercase of model
     php {$_SERVER['SCRIPT_NAME']} --types=index,info,create,update,delete [OPTIONAL]
-    php {$_SERVER['SCRIPT_NAME']} -o [OPTIONAL] overwrite
+    php {$_SERVER['SCRIPT_NAME']} -w [OPTIONAL] override
 [Quick Start]
     php {$_SERVER['SCRIPT_NAME']} --model=SysUser
 EOT;
@@ -29,7 +29,7 @@ if(!$opt['models'] || isset($opt['h'])){
 	die($usage);
 }
 
-$overwrite = isset($opt['o']);
+$overwrite = isset($opt['w']);
 $types = $opt['types'];
 $models = explode_by(',', $opt['models']);
 Logger::info('Start to generate CRUD');
@@ -68,20 +68,22 @@ foreach($models as $model){
 			if(isset($tmp[$r])){
 				Logger::info('router rule already exists, ignore:'.$r);
 			}else if($r === $model_lowercase.'/*'){
-				$route_patches[] = "'$r' => $full_controller_class::class.'@*'";
+				$route_patches[] = "'$r' => $full_controller_class::class.'@*',";
 			}else{
 				$method = explode('/', $r)[1];
-				$route_patches[] = "'$r' => $full_controller_class::class.'@$method'";
+				$route_patches[] = "'$r' => $full_controller_class::class.'@$method',";
 			}
+		}
+		if(!$route_patches){
+			Logger::info("no routes need to patch:\n", join("\n", $route_patches));
+			return;
 		}
 		Logger::warning("routes to patch:\n", join("\n", $route_patches));
 		$route_str = file_get_contents(PLITE_CONFIG_PATH.'/routes.inc.php');
-		$last_sq_seg_pos = strpos($route_str, '(');
-		$last_mq_seg_pos = strpos($route_str, '[');
-		if($last_sq_seg_pos !== false){
-			$route_str = substr($route_str, 0, $last_sq_seg_pos + 1)."\n".join("\n", $route_patches).",".substr($route_str, $last_sq_seg_pos + 1);
-		}else if($last_mq_seg_pos !== false){
-			$route_str = substr($route_str, 0, $last_mq_seg_pos + 1)."\n".join("\n", $route_patches).",".substr($route_str, $last_mq_seg_pos + 1);
+		$route_str = $route_str ?: '<?php return [];';
+		$last_mq_seg_pos = strpos($route_str, ']');
+		if($last_mq_seg_pos !== false){
+			$route_str = substr($route_str, 0, $last_mq_seg_pos)."\n".join("\n", $route_patches).substr($route_str, $last_mq_seg_pos);
 		}else{
 			throw new Exception('router patch fail, content resolve fail:'.$route_str);
 		}

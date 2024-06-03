@@ -8,14 +8,18 @@ use LFPhp\PORM\Misc\PaginateInterface;
 class Paginate implements PaginateInterface, JsonSerializable {
 	private $item_total;
 	private $current_page;
+	private static $default_page_size;
 
 	private $config = [
 		'page_key'  => 'page',
 		'page_size_key' => 'page_size',
-		'page_size' => 20,
+		'page_size' => 20
 	];
 
 	private function __construct($config){
+		if(!$config['page_size'] && self::$default_page_size){
+			$config['page_size'] = self::$default_page_size;
+		}
 		$this->config = array_merge($this->config, $config);
 		$page_key = $this->config['page_key'];
 		$page_size_key = $this->config['page_size_key'];
@@ -30,6 +34,10 @@ class Paginate implements PaginateInterface, JsonSerializable {
 			$instance_list[$k] = new self($config);
 		}
 		return $instance_list[$k];
+	}
+
+	public static function setDefaultPageSize($page_size){
+		self::$default_page_size = $page_size;
 	}
 
 	public function __toString(){

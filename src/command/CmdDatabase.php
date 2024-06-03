@@ -19,15 +19,33 @@ class CmdDatabase extends Cmd {
 		return 'Initialize database configuration';
 	}
 
+	public static function getAllDatabaseConfig(){
+		$database_file = self::getDatabaseConfigFile();
+		if(!$database_file){
+			throw new \Exception('No database config file:'.$database_file);
+		}
+		$config = include $database_file;
+		if(!$config || !is_array($config)){
+			throw new \Exception('Database config empty: '.$database_file);
+		}
+		return $config;
+	}
+
+	public static function getDatabaseConfigFile(){
+		$project_info = ProjectBuilder::getProjectInfo();
+		$app_root = $project_info['app_root'];
+		$f = $app_root.'/config/database.inc.php';
+		return is_file($f) ? $f : null;
+	}
+
 	public function run(){
 		ProjectBuilder::initFile('tag-database');
 
 		$project_info = ProjectBuilder::getProjectInfo();
 		$app_name_var = $project_info['app_name_var'];
-		$app_root = $project_info['app_root'];
-		$database_file = $app_root.'/config/database.inc.php';
+		$database_file = self::getDatabaseConfigFile();
 		$config = [];
-		if(is_file($database_file)){
+		if($database_file){
 			try{
 				$config = include $database_file;
 				Logger::debug('Database config file already exists: '.$database_file, $config);

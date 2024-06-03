@@ -17,7 +17,7 @@ use const LFPhp\PLite\EVENT_APP_START;
 use const LFPhp\PLite\EVENT_ROUTER_HIT;
 
 try{
-	define('PLITE_APP_ROOT',dirname(__DIR__, 2));
+	define('PLITE_APP_ROOT',dirname(__DIR__));
 	include_once PLITE_APP_ROOT.'/vendor/autoload.php';
 	if(!session_start()){
 		throw new Exception('Session start failure');
