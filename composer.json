@@ -20,7 +20,7 @@
 	"require": {
 		"lfphp/func": "^1.2",
 		"lfphp/porm": "*",
-		"lfphp/plite": "^0.0.51",
+		"lfphp/plite": "*",
 		"ext-json": "*",
 		"lfphp/logger": "^1.1"
 	},
