@@ -24,7 +24,7 @@ use function LFPhp\PLite\include_page;
 include_page('header.inc.php');
 ?>
 <div class="content">
-	<h2 class="page-cap"><?=$model_title;?>详情</h2>
+	<h2 class="page-caption"><?=$model_title;?>详情</h2>
 	<ul class="info-list">
 <?php foreach($attrs as $attr):if($attr->is_primary_key){continue;}?>
 		<li>

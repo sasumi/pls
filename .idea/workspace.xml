@@ -6,9 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="82cfd0af-8525-48fa-9c83-86977bfa521e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/tag-base/public/css/define.css" beforeDir="false" afterPath="$PROJECT_DIR$/template/tag-base/public/css/define.css.tpl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/tag-base/public/css/reset.css" beforeDir="false" afterPath="$PROJECT_DIR$/template/tag-base/public/css/reset.css.tpl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/tag-base/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/template/tag-base/public/css/style.css.tpl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/tag-crud/script/crud/create.tpl.php.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/template/tag-crud/script/crud/create.tpl.php.tpl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/tag-crud/script/crud/index.tpl.php.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/template/tag-crud/script/crud/index.tpl.php.tpl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/tag-crud/script/crud/info.tpl.php.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/template/tag-crud/script/crud/info.tpl.php.tpl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/tag-crud/script/crud/update.tpl.php.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/template/tag-crud/script/crud/update.tpl.php.tpl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/tag-orm/src/Http/Paginate.php.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/template/tag-orm/src/Http/Paginate.php.tpl" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,9 +33,9 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/run.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/install.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/composer.json" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/run.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/.gitignore" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -62,7 +64,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/template/tag-orm/src/Http" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -75,8 +77,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\htdocs\pls" />
       <recent name="D:\htdocs\pls\template\tag-orm\src\Http" />
+      <recent name="D:\htdocs\pls" />
       <recent name="D:\htdocs\pls\src" />
       <recent name="D:\htdocs\pls\template\tag-base\public" />
       <recent name="D:\htdocs\pls\template\tag-base\src\Http" />
@@ -106,7 +108,11 @@
       <workItem from="1717404199687" duration="2174000" />
       <workItem from="1717411602335" duration="6243000" />
       <workItem from="1717557557156" duration="1965000" />
-      <workItem from="1717587361929" duration="150000" />
+      <workItem from="1717587361929" duration="946000" />
+      <workItem from="1717684787463" duration="32000" />
+      <workItem from="1717745281028" duration="682000" />
+      <workItem from="1718447185798" duration="630000" />
+      <workItem from="1721378509774" duration="122000" />
     </task>
     <servers />
   </component>

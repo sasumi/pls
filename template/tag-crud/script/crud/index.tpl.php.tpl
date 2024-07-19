@@ -31,22 +31,29 @@ use function LFPhp\PLite\url_input;
 include_page('header.inc.php');
 ?>
 <div class="content">
-	<h2 class="page-cap"><?=$model_title;?>列表</h2>
-	<form action="<?='<?='?>url('<?=$uri;?>');?>" method="get" class="filter-form">
-<?='<?='?>url_input('<?=$uri;?>');?>
-		<div class="form-row">
-			<label>关键字：<input type="search" name="kw" value="<?='<?='?>ha($search['kw']);?>"></label>
-		</div>
-		<div class="form-row">
-			<input type="submit" value="查询"> <input type="reset" class="outline-button" value="重置">
-		</div>
+	<h2 class="page-caption"><?=$model_title;?>列表</h2>
+	<form action="<?='<?='?>url('<?=$uri;?>');?>" method="get">
+		<?='<?='?>url_input('<?=$uri;?>');?>
+		<table class="filter-form">
+			<tbody>
+				<tr>
+					<th>关键字：</th>
+					<td><input type="search" name="kw" value="<?='<?='?>ha($search['kw']);?>"></td>
+				</tr>
+				<tr>
+					<td>
+						<input type="submit" value="查询"> <input type="reset" class="outline-button" value="重置">
+					</td>
+				</tr>
+			</tbody>
+		</table>
 	</form>
 <?php if($operate_types['create']):?>
 	<div class="operate-bar">
 		<a href="<?='<?=';?>url('<?=$model_lowercase;?>/create');?>" data-component="dialog" class="create-button button"><?=$operate_types['create'];?></a>
 	</div>
 <?php endif;?>
-	<table class="data-table fixed-head" data-component="empty">
+	<table class="table-data table-fixed-head" data-component="empty">
 		<thead>
 			<tr>
 <?php foreach($attrs as $attr):if($attr->is_primary_key){continue;}?>

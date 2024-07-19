@@ -29,9 +29,9 @@ include_page('header.inc.php');
 $model = <?=$model;?>::findOneByPkOrFail($<?=$pk_field;?>);
 ?>
 <div class="content">
-	<h2 class="page-cap">更新<?=$model_title;?></h2>
-	<form action="<?='<?=';?>url('<?=$uri;?>', ['<?=$pk_field;?>'=>$model-><?=$pk_field;?>]);?>" class="form" method="post" data-component="async">
-		<table class="form-table">
+	<h2 class="page-caption">更新<?=$model_title;?></h2>
+	<form action="<?='<?=';?>url('<?=$uri;?>', ['<?=$pk_field;?>'=>$model-><?=$pk_field;?>]);?>" method="post" data-component="async">
+		<table class="form-landscape">
 			<tbody>
 <?php foreach($attrs as $attr):if($attr->is_readonly){continue;}?>
 				<tr>

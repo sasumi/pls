@@ -28,9 +28,9 @@ use <?=$full_model_class;?>;
 include_page('header.inc.php');
 ?>
 <div class="content">
-	<h2 class="page-cap">创建<?=$model_title;?></h2>
-	<form action="<?='<?=';?>url('<?=$uri;?>');?>" class="form" method="post" data-component="async">
-		<table class="form-table">
+	<h2 class="page-caption">创建<?=$model_title;?></h2>
+	<form action="<?='<?=';?>url('<?=$uri;?>');?>" method="post" data-component="async">
+		<table class="form-landscape">
 			<tbody>
 <?php foreach($attrs as $attr):if($attr->is_readonly){continue;}?>
 				<tr>
