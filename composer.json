@@ -19,10 +19,10 @@
 	],
 	"require": {
 		"lfphp/func": "^1.2",
-		"lfphp/porm": "*",
 		"lfphp/plite": "*",
 		"ext-json": "*",
-		"lfphp/logger": "^1.1"
+		"lfphp/logger": "^1.1",
+		"lfphp/porm": "^0.0.64"
 	},
 	"scripts": {
 		"pls": "LFPhp\\Pls\\ProjectBuilder::start"

@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="82cfd0af-8525-48fa-9c83-86977bfa521e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/tag-crud/script/crud/create.tpl.php.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/template/tag-crud/script/crud/create.tpl.php.tpl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/tag-crud/script/crud/index.tpl.php.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/template/tag-crud/script/crud/index.tpl.php.tpl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/tag-crud/script/crud/info.tpl.php.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/template/tag-crud/script/crud/info.tpl.php.tpl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/tag-crud/script/crud/update.tpl.php.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/template/tag-crud/script/crud/update.tpl.php.tpl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/tag-orm/src/Http/Paginate.php.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/template/tag-orm/src/Http/Paginate.php.tpl" afterDir="false" />
-    </list>
+    <list default="true" id="82cfd0af-8525-48fa-9c83-86977bfa521e" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -112,7 +105,7 @@
       <workItem from="1717684787463" duration="32000" />
       <workItem from="1717745281028" duration="682000" />
       <workItem from="1718447185798" duration="630000" />
-      <workItem from="1721378509774" duration="122000" />
+      <workItem from="1721378509774" duration="318000" />
     </task>
     <servers />
   </component>

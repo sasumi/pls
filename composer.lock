@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "161d2128214d9ae1ada87feb139010ba",
+    "content-hash": "455df20ce12f1bb31f74280e5ef54e02",
     "packages": [
         {
             "name": "lfphp/func",
-            "version": "1.2.3",
+            "version": "1.2.20",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sasumi/Func.git",
-                "reference": "dc0a9c040d11422e4042b801d4630693a3b332c1"
+                "reference": "c459702816138aca543c3208f58372bbef520efe"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sasumi/Func/zipball/dc0a9c040d11422e4042b801d4630693a3b332c1",
-                "reference": "dc0a9c040d11422e4042b801d4630693a3b332c1",
+                "url": "https://api.github.com/repos/sasumi/Func/zipball/c459702816138aca543c3208f58372bbef520efe",
+                "reference": "c459702816138aca543c3208f58372bbef520efe",
                 "shasum": ""
             },
             "require": {
@@ -41,6 +41,7 @@
                     "src/curl.php",
                     "src/db.php",
                     "src/env.php",
+                    "src/event.php",
                     "src/file.php",
                     "src/font.php",
                     "src/html.php",
@@ -70,9 +71,9 @@
             ],
             "support": {
                 "issues": "https://github.com/sasumi/Func/issues",
-                "source": "https://github.com/sasumi/Func/tree/1.2.3"
+                "source": "https://github.com/sasumi/Func/tree/1.2.20"
             },
-            "time": "2024-05-25T08:24:16+00:00"
+            "time": "2024-08-05T08:17:19+00:00"
         },
         {
             "name": "lfphp/logger",
@@ -126,16 +127,16 @@
         },
         {
             "name": "lfphp/pdodsn",
-            "version": "0.0.12",
+            "version": "0.0.13",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sasumi/PDODSN.git",
-                "reference": "b76de3ec1b9e51b6d430b65da69e595fab92de0a"
+                "reference": "12052e06c08a3e3b3566b4bf01f5b6ffa5da651e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sasumi/PDODSN/zipball/b76de3ec1b9e51b6d430b65da69e595fab92de0a",
-                "reference": "b76de3ec1b9e51b6d430b65da69e595fab92de0a",
+                "url": "https://api.github.com/repos/sasumi/PDODSN/zipball/12052e06c08a3e3b3566b4bf01f5b6ffa5da651e",
+                "reference": "12052e06c08a3e3b3566b4bf01f5b6ffa5da651e",
                 "shasum": ""
             },
             "require": {
@@ -172,9 +173,9 @@
             ],
             "support": {
                 "issues": "https://github.com/sasumi/PDODSN/issues",
-                "source": "https://github.com/sasumi/PDODSN/tree/0.0.12"
+                "source": "https://github.com/sasumi/PDODSN/tree/0.0.13"
             },
-            "time": "2024-03-24T12:46:59+00:00"
+            "time": "2024-06-04T05:00:29+00:00"
         },
         {
             "name": "lfphp/plite",
@@ -224,16 +225,16 @@
         },
         {
             "name": "lfphp/porm",
-            "version": "0.0.58",
+            "version": "0.0.64",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sasumi/PORM.git",
-                "reference": "18072f91234d75ff7c55d5ab8f6b7dd64dabd538"
+                "reference": "fd45dfda3f633551c1cbdbffa782e84b07516f96"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sasumi/PORM/zipball/18072f91234d75ff7c55d5ab8f6b7dd64dabd538",
-                "reference": "18072f91234d75ff7c55d5ab8f6b7dd64dabd538",
+                "url": "https://api.github.com/repos/sasumi/PORM/zipball/fd45dfda3f633551c1cbdbffa782e84b07516f96",
+                "reference": "fd45dfda3f633551c1cbdbffa782e84b07516f96",
                 "shasum": ""
             },
             "require": {
@@ -241,13 +242,10 @@
                 "ext-mbstring": "*",
                 "ext-mysqli": "*",
                 "ext-pdo": "*",
-                "lfphp/func": "^1.1",
+                "lfphp/func": "^1.2",
                 "lfphp/logger": "^1.1",
-                "lfphp/pdodsn": "^0.0.12",
+                "lfphp/pdodsn": "^0.0.13",
                 "php": ">=5.6"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^9.5"
             },
             "type": "library",
             "autoload": {
@@ -274,9 +272,9 @@
             ],
             "support": {
                 "issues": "https://github.com/sasumi/PORM/issues",
-                "source": "https://github.com/sasumi/PORM/tree/0.0.58"
+                "source": "https://github.com/sasumi/PORM/tree/0.0.64"
             },
-            "time": "2024-03-28T07:46:03+00:00"
+            "time": "2024-08-14T04:48:19+00:00"
         }
     ],
     "packages-dev": [],
