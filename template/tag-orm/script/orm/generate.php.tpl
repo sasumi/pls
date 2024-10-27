@@ -8,6 +8,7 @@ use LFPhp\PORM\ORM\DSLHelper;
 use function LFPhp\Func\check_php_var_name_legal;
 use function LFPhp\Func\get_all_opt;
 use function LFPhp\Func\pascalcase_to_underscores;
+use function LFPhp\Func\render_php_file;
 use function LFPhp\Func\underscores_to_pascalcase;
 use function LFPhp\PLite\get_app_var_name;
 use function LFPhp\PLite\get_config;
@@ -28,8 +29,15 @@ if(isset($opt['h'])){
 	die($usage);
 }
 
-$specified_source_id = $opt['source_id'];
+const TEMPLATE_TABLE = __DIR__.'/table.tpl.php';
+const TEMPLATE_MODEL = __DIR__.'/model.tpl.php';
+const TEMPLATE_MODEL_BASE = __DIR__.'/modelbase.tpl.php';
 
+const OUTPUT_TABLE_DIR = PLITE_APP_ROOT."/src/Business/%s/Table";
+const OUTPUT_MODEL_DIR = PLITE_APP_ROOT."/src/Business/%s/Model";
+const OUTPUT_MODEL_BASE_FILE = PLITE_APP_ROOT."/src/Business/%s/ModelBase.php";
+
+$specified_source_id = $opt['source_id'];
 $ns_prefix = get_app_var_name();
 
 if($specified_source_id && ucfirst($specified_source_id) !== $specified_source_id){
@@ -39,8 +47,8 @@ if($specified_source_id && ucfirst($specified_source_id) !== $specified_source_i
 
 if(!$specified_source_id){
 	$all_db_config = get_config('database');
-	$source_ids = array_keys($all_db_config);
-	Logger::warning('Using all source ids: '.join(", ", $source_ids));
+	$source_ids = array_map('ucfirst', array_keys($all_db_config));
+	Logger::warning('Using all source id, all source id corrected: '.join(", ", $source_ids));
 }else{
 	$source_ids = [$opt['source_id']];
 }
@@ -53,21 +61,18 @@ foreach($source_ids as $source_id){
 		throw new Exception('Database config no found:'.$source_id);
 	}
 
-	$OUTPUT_TABLE_DIR = PLITE_APP_ROOT."/src/Business/$source_id/Table";
-	$OUTPUT_MODEL_DIR = PLITE_APP_ROOT."/src/Business/$source_id/Model";
-	$MODEL_BASE_FILE = PLITE_APP_ROOT."/src/Business/$source_id/ModelBase.php";
-
-	$output_table_dir = $OUTPUT_TABLE_DIR;
+	$model_base_file = sprintf(OUTPUT_MODEL_BASE_FILE, $source_id);
+	$output_table_dir = sprintf(OUTPUT_TABLE_DIR, $source_id);
 	!is_dir($output_table_dir) && mkdir($output_table_dir, 0777, true);
 
-	$output_model_dir = $OUTPUT_MODEL_DIR;
+	$output_model_dir = sprintf(OUTPUT_MODEL_DIR, $source_id);;
 	!is_dir($output_model_dir) && mkdir($output_model_dir, 0777, true);
 
-	if(!is_file($MODEL_BASE_FILE)){
-		$output = buildModelBaseTemplate($source_id, $ns_prefix);
-		$ret = file_put_contents($MODEL_BASE_FILE, $output);
+	if(!is_file($model_base_file)){
+		$output = render_php_file(TEMPLATE_MODEL_BASE, compact('source_id'));
+		$ret = file_put_contents($model_base_file, $output);
 		if($ret){
-			Logger::info("model base generated: $MODEL_BASE_FILE");
+			Logger::info("model base generated: $model_base_file");
 		}
 	}
 
@@ -91,10 +96,10 @@ foreach($source_ids as $source_id){
 			Logger::warning('Table ignore.', $table);
 			continue;
 		}
-		list($_, $table_desc, $attrs) = DSLHelper::getTableInfoByDSN($dsn, $table);
+		[$_, $table_description, $attributes] = DSLHelper::getTableInfoByDSN($dsn, $table);
 		$ignores[$table_adjust] = true;
 		$table_file = $output_table_dir.'/'.underscores_to_pascalcase($table_adjust, true).'Table.php';
-		$output = buildTableTemplate($source_id, $ns_prefix, $table_adjust, $table_desc, $attrs);
+		$output = render_php_file(TEMPLATE_TABLE, compact('source_id', 'table', 'table_description', 'attributes'));
 		$ret = file_put_contents($table_file, $output);
 		if($ret){
 			Logger::info("table generated: $table ==> ".underscores_to_pascalcase($table_adjust, true), "File:".$table_file);
@@ -106,7 +111,7 @@ foreach($source_ids as $source_id){
 		if(is_file($model_file)){
 			Logger::info("model file already exists.", $model_file);
 		}else{
-			$output = buildModelTemplate($source_id, $ns_prefix, $table_adjust, $table_desc, $attrs);
+			$output = render_php_file(TEMPLATE_MODEL, compact('source_id', 'table', 'table_description', 'attributes'));
 			$ret = file_put_contents($model_file, $output);
 			Logger::info("Model generated: $table ==> ".underscores_to_pascalcase($table_adjust, true), "File:".$model_file);
 		}
@@ -120,30 +125,6 @@ function tableFix($table){
 	//	$table = preg_replace('/[_\d]+$/','', $table);
 	//	$table = preg_replace('/^t_/i', '', $table);
 	return $table;
-}
-
-function buildTableTemplate($source_id, $ns_prefix, $table, $table_description, $attributes){
-	ob_start();
-	include __DIR__.'/table.tpl.php';
-	$str = ob_get_contents();
-	ob_end_clean();
-	return $str;
-}
-
-function buildModelBaseTemplate($source_id){
-	ob_start();
-	include __DIR__.'/modelbase.tpl.php';
-	$str = ob_get_contents();
-	ob_end_clean();
-	return $str;
-}
-
-function buildModelTemplate($source_id, $ns_prefix, $table, $table_description, $attributes){
-	ob_start();
-	include __DIR__.'/model.tpl.php';
-	$str = ob_get_contents();
-	ob_end_clean();
-	return $str;
 }
 
 /**
