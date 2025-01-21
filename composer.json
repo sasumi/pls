@@ -15,5 +15,11 @@
 		"lfphp/plite": "^1.0",
 		"lfphp/logger": "^2.0",
 		"ext-json": "*"
+	},
+	"scripts": {
+		"post-create-project-cmd": [
+			"@php pls.php help"
+		]
 	}
+
 }
