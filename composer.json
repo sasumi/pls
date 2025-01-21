@@ -4,12 +4,6 @@
 	"type": "library",
 	"license": "MIT",
 	"autoload": {
-		"files": [
-			"src/function.php"
-		],
-		"psr-4": {
-			"LFPhp\\Pls\\": "src/"
-		}
 	},
 	"authors": [
 		{
@@ -18,13 +12,8 @@
 		}
 	],
 	"require": {
-		"lfphp/func": "^1.2",
-		"lfphp/plite": "*",
-		"ext-json": "*",
-		"lfphp/logger": "^1.1",
-		"lfphp/porm": "^0.0.64"
-	},
-	"scripts": {
-		"pls": "LFPhp\\Pls\\ProjectBuilder::start"
+		"lfphp/plite": "^1.0",
+		"lfphp/logger": "^2.0",
+		"ext-json": "*"
 	}
 }

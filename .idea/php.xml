@@ -2,12 +2,10 @@
 <project version="4">
   <component name="PhpIncludePathManager">
     <include_path>
-      <path value="$PROJECT_DIR$/vendor/lfphp/pdodsn" />
-      <path value="$PROJECT_DIR$/vendor/lfphp/logger" />
       <path value="$PROJECT_DIR$/vendor/lfphp/func" />
-      <path value="$PROJECT_DIR$/vendor/lfphp/porm" />
       <path value="$PROJECT_DIR$/vendor/lfphp/plite" />
       <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/lfphp/logger" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.3">
