@@ -5,8 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="82cfd0af-8525-48fa-9c83-86977bfa521e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/script/installer/command/reset.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/script/installer/template/tag-base/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/script/installer/autoload.php" beforeDir="false" afterPath="$PROJECT_DIR$/script/installer/autoload.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/script/installer/command/init.php" beforeDir="false" afterPath="$PROJECT_DIR$/script/installer/command/init.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,8 +34,22 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/script/installer/command/front.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/script/installer/command/database.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/script/installer/command/crud.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/script/installer/command/check.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/script/installer/command/base.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/pls.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../plstest/pls/.gitignore" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/script/installer/command/reset.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../plstest/packages.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/script/installer/template/tag-base/.gitignore" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/.gitignore" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/script/installer/command/orm.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/script/installer/command/init.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/composer.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/script/installer/autoload.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/script/installer/command/help.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -56,7 +75,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/.install/command" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/script/installer/template/tag-base" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -69,11 +88,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\htdocs\pls\script\installer\template\tag-base" />
+      <recent name="D:\htdocs\pls\script\installer\command" />
       <recent name="D:\htdocs\pls\.install\command" />
       <recent name="D:\htdocs\pls\public" />
       <recent name="D:\htdocs\pls\.install" />
-      <recent name="D:\htdocs\pls\template\tag-orm\src\Http" />
-      <recent name="D:\htdocs\pls" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\htdocs\pls\.install\template\tag-base\.runtime" />
@@ -111,7 +130,7 @@
       <workItem from="1730013094615" duration="28000" />
       <workItem from="1737384275434" duration="2372000" />
       <workItem from="1737436276432" duration="5174000" />
-      <workItem from="1737460217281" duration="6112000" />
+      <workItem from="1737460217281" duration="8292000" />
     </task>
     <servers />
   </component>

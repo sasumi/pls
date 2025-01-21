@@ -76,6 +76,19 @@ function pls_get_composer_info($path = ''){
 	return array_get($json, $path);
 }
 
+function pls_update_project_name($new_name){
+	$new_name = trim(strtolower($new_name));
+	$old_name = pls_get_composer_info('name');
+	if($new_name === $old_name){
+		Logger::warning('new name same as old.');
+		return false;
+	}
+	$json = json_decode(file_get_contents(PLS_PROJECT_ROOT.'/composer.json'), true);
+	$json['name'] = $new_name;
+	pls_save_file(PLS_PROJECT_ROOT.'/composer.json', json_encode($json, JSON_UNESCAPED_UNICODE|JSON_PRETTY_PRINT));
+	return true;
+}
+
 function pls_get_project_info(){
 	$package_name = pls_get_composer_info('name');
 	$ns = explode('/', $package_name);
@@ -115,14 +128,15 @@ function pls_get_all_database_config(){
 
 function pls_get_all_commands(){
 	$fs = [
+		PLS_INSTALLER_ROOT.'/command/reset.php',
+		PLS_INSTALLER_ROOT.'/command/help.php',
+		PLS_INSTALLER_ROOT.'/command/check.php',
+		PLS_INSTALLER_ROOT.'/command/init.php',
 		PLS_INSTALLER_ROOT.'/command/base.php',
+		PLS_INSTALLER_ROOT.'/command/orm.php',
 		PLS_INSTALLER_ROOT.'/command/crud.php',
 		PLS_INSTALLER_ROOT.'/command/database.php',
-		PLS_INSTALLER_ROOT.'/command/check.php',
 		PLS_INSTALLER_ROOT.'/command/front.php',
-		PLS_INSTALLER_ROOT.'/command/help.php',
-		PLS_INSTALLER_ROOT.'/command/init.php',
-		PLS_INSTALLER_ROOT.'/command/orm.php',
 	];
 	$cmd_list = [];
 	foreach($fs as $f){
