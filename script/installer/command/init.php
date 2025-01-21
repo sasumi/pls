@@ -11,20 +11,17 @@ return [
 
 		$step_counter = 1;
 		$total_command = count($commands);
-		Logger::info('==== Start Init Project ====');
-		Logger::info("Total $total_command steps to execute.");
+		echo '==== Start Init Project ====', PHP_EOL;
+		echo "Total $total_command steps to execute.", PHP_EOL;
 		foreach($commands as $step_cmd=>$item){
-			Logger::info(" > $step_counter. $step_cmd");
+			echo "[$step_counter] $step_cmd", PHP_EOL;
 			$step_counter++;
 		}
 
 		$step_counter = 1;
-		foreach($commands as $cmd=>$item){
-			Logger::info('');
-			Logger::info(console_color("Step[$step_counter/$total_command] $cmd", 'green'));
-			$class = $item['class'];
-			$ins = new $class();
-			$ins->run();
+		foreach($commands as $cmd=>$_){
+			echo PHP_EOL,console_color("[$step_counter/$total_command] $cmd", 'green'),PHP_EOL;
+			pls_run_cmd($cmd);
 			$step_counter++;
 		}
 		Logger::info('---- Project Init Done ----');

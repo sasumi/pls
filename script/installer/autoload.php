@@ -11,8 +11,8 @@ use function LFPhp\Func\readline;
 use function LFPhp\Func\underscores_to_pascalcase;
 use function LFPhp\Func\var_export_min;
 
-const PLS_PROJECT_ROOT = __DIR__;
-const PLS_INSTALL_ROOT = __DIR__;
+const PLS_PROJECT_ROOT = __DIR__.'/../../';
+const PLS_INSTALLER_ROOT = __DIR__;
 
 /**
  * white php config file (with return statement in file)
@@ -26,11 +26,11 @@ function pls_write_php_config_file($file, $config){
 <?php 
 return $cfg_arr_str;
 EOT;
-	file_put_contents($file, $str);
+	pls_save_file($file, $str);
 }
 
 function pls_get_template_project_files($tag){
-	$tpl_dir = realpath(PLS_INSTALL_ROOT."/template/$tag");
+	$tpl_dir = realpath(PLS_INSTALLER_ROOT."/template/$tag");
 	$dirs = glob_recursive($tpl_dir.'/*');
 	$file_map = [//src_file => target_file
 	];
@@ -48,9 +48,9 @@ function pls_get_template_project_files($tag){
 }
 
 function pls_get_template_project_structure($tag){
-	$tpl_dir = realpath(PLS_INSTALL_ROOT."/template/$tag");
+	$tpl_dir = realpath(PLS_INSTALLER_ROOT."/template/$tag");
 	if(!$tpl_dir){
-		throw new Exception('template dir no exist: '.PLS_INSTALL_ROOT."/template/$tag");
+		throw new Exception('template dir no exist: '.PLS_INSTALLER_ROOT."/template/$tag");
 	}
 	$dirs = glob_recursive($tpl_dir."/*", GLOB_ONLYDIR);
 	foreach($dirs as $k => $dir){
@@ -115,14 +115,14 @@ function pls_get_all_database_config(){
 
 function pls_get_all_commands(){
 	$fs = [
-		PLS_INSTALL_ROOT.'/command/base.php',
-		PLS_INSTALL_ROOT.'/command/crud.php',
-		PLS_INSTALL_ROOT.'/command/database.php',
-		PLS_INSTALL_ROOT.'/command/check.php',
-		PLS_INSTALL_ROOT.'/command/front.php',
-		PLS_INSTALL_ROOT.'/command/help.php',
-		PLS_INSTALL_ROOT.'/command/init.php',
-		PLS_INSTALL_ROOT.'/command/orm.php',
+		PLS_INSTALLER_ROOT.'/command/base.php',
+		PLS_INSTALLER_ROOT.'/command/crud.php',
+		PLS_INSTALLER_ROOT.'/command/database.php',
+		PLS_INSTALLER_ROOT.'/command/check.php',
+		PLS_INSTALLER_ROOT.'/command/front.php',
+		PLS_INSTALLER_ROOT.'/command/help.php',
+		PLS_INSTALLER_ROOT.'/command/init.php',
+		PLS_INSTALLER_ROOT.'/command/orm.php',
 	];
 	$cmd_list = [];
 	foreach($fs as $f){
@@ -163,7 +163,7 @@ function pls_add_git_ignore($path, array $rules){
 		$str .= "\n".$rule;
 	}
 	$org_content = is_file($git_ignore_file) ? trim(file_get_contents($git_ignore_file)) : '';
-	file_put_contents($git_ignore_file, $org_content."\n".$str, FILE_APPEND);
+	pls_save_file($git_ignore_file, $org_content."\n".$str, FILE_APPEND);
 	return true;
 }
 
@@ -210,19 +210,16 @@ function pls_add_config_items($config_file, array $lines, $auto_create_file = fa
 	}else{
 		throw new Exception('config file patch fail, content resolve fail:'.$config_Str);
 	}
-	file_put_contents($config_file, $config_Str);
+	pls_save_file($config_file, $config_Str);
 }
 
 function pls_init_file($tag){
 	$file_structs = pls_get_template_project_structure($tag);
 	foreach($file_structs as $dir){
 		if(!is_dir($dir)){
-			if(!mkdir($dir, 0x777, true)){
-				throw new Exception('Make directory fail:'.$dir);
-			}
-			Logger::info('Directory created:', realpath($dir));
+			pls_mkdir($dir, 0x777, true);
 		}else{
-			Logger::debug('Directory already exists.', realpath($dir));
+			Logger::debug('Directory already exists:', realpath($dir));
 		}
 	}
 
@@ -232,13 +229,13 @@ function pls_init_file($tag){
 	foreach($file_map as $src_file => [$target_file, $is_tpl]){
 		$file_exists = is_file($target_file);
 		if(!$overwrite && $file_exists){
-			Logger::debug('Target file exists: '.$target_file);
+			Logger::debug('Target file exists:'.$target_file);
 			continue;
 		}
 		if($file_exists){
 			Logger::warning('File Override:', $target_file);
-		} else {
-			Logger::info('Build File:', $target_file);
+		}else{
+			Logger::info('Create File:', $target_file);
 		}
 
 		if($is_tpl){
@@ -247,11 +244,36 @@ function pls_init_file($tag){
 				$hit = false;
 				$ctn = pls_mixing_project_info($ctn, $hit);
 				if($hit){
-					file_put_contents($target_file, $ctn);
+					pls_save_file($target_file, $ctn);
 					continue;
 				}
 			}
 		}
-		copy($src_file, $target_file);
+		pls_copy($src_file, $target_file);
+	}
+}
+
+function pls_copy($src_file, $target_file){
+	if(DRY_RUN){
+		return true;
+	}
+	return copy($src_file, $target_file);
+}
+
+function pls_save_file($file, $content, $flag = null){
+	if(DRY_RUN){
+		return true;
+	}
+	return file_put_contents($file, $content, $flag);
+}
+
+function pls_mkdir($dir, $permission = null, $recursive = false){
+	if(DRY_RUN || is_dir($dir)){
+		return true;
+	}
+	Logger::info('Directory created:', realpath($dir));
+	$ret = mkdir($dir, $permission, $recursive);
+	if(!$ret){
+		throw new Exception('Make directory fail:'.$dir);
 	}
 }

@@ -5,67 +5,55 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="82cfd0af-8525-48fa-9c83-86977bfa521e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.install/autoload.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.install/command/check.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pls.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/pls.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/pls.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/install.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/run.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ProjectBuilder.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/command/Cmd.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/command/CmdBase.php" beforeDir="false" afterPath="$PROJECT_DIR$/.install/command/base.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/command/CmdCrud.php" beforeDir="false" afterPath="$PROJECT_DIR$/.install/command/crud.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/command/CmdDatabase.php" beforeDir="false" afterPath="$PROJECT_DIR$/.install/command/database.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/command/CmdEnvConfirm.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/command/CmdFront.php" beforeDir="false" afterPath="$PROJECT_DIR$/.install/command/front.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/command/CmdHelp.php" beforeDir="false" afterPath="$PROJECT_DIR$/.install/command/help.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/command/CmdInit.php" beforeDir="false" afterPath="$PROJECT_DIR$/.install/command/init.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/command/CmdOrm.php" beforeDir="false" afterPath="$PROJECT_DIR$/.install/command/orm.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/function.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/tag-base/config/app.inc.php.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/.install/template/tag-base/config/app.inc.php.tpl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/tag-base/config/routes.inc.php.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/.install/template/tag-base/config/routes.inc.php.tpl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/tag-base/doc/README.md.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/.install/template/tag-base/doc/README.md.tpl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/tag-base/public/css/define.css.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/.install/template/tag-base/public/css/define.css.tpl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/tag-base/public/css/reset.css.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/.install/template/tag-base/public/css/reset.css.tpl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/tag-base/public/css/style.css.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/.install/template/tag-base/public/css/style.css.tpl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/tag-base/public/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/.install/template/tag-base/public/favicon.ico" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/tag-base/public/index.php.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/.install/template/tag-base/public/index.php.tpl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/tag-base/src/Http/AuthorizeFreeTrait.php.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/.install/template/tag-base/src/Http/AuthorizeFreeTrait.php.tpl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/tag-base/src/Http/AuthorizeRequiredTrait.php.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/.install/template/tag-base/src/Http/AuthorizeRequiredTrait.php.tpl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/tag-base/src/Http/Controller.php.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/.install/template/tag-base/src/Http/Controller.php.tpl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/tag-base/src/Http/Controller/Index.php.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/.install/template/tag-base/src/Http/Controller/Index.php.tpl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/tag-base/src/page/404.php.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/.install/template/tag-base/src/page/404.php.tpl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/tag-base/src/page/5xx.php.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/.install/template/tag-base/src/page/5xx.php.tpl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/tag-base/src/page/footer.inc.php.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/.install/template/tag-base/src/page/footer.inc.php.tpl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/tag-base/src/page/header.inc.php.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/.install/template/tag-base/src/page/header.inc.php.tpl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/tag-base/src/page/index/index.php.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/.install/template/tag-base/src/page/index/index.php.tpl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/tag-base/src/page/nav.inc.php.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/.install/template/tag-base/src/page/nav.inc.php.tpl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/tag-crud/script/crud/controller.tpl.php.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/.install/template/tag-crud/script/crud/controller.tpl.php.tpl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/tag-crud/script/crud/create.tpl.php.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/.install/template/tag-crud/script/crud/create.tpl.php.tpl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/tag-crud/script/crud/generate.php.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/.install/template/tag-crud/script/crud/generate.php.tpl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/tag-crud/script/crud/index.tpl.php.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/.install/template/tag-crud/script/crud/index.tpl.php.tpl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/tag-crud/script/crud/info.tpl.php.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/.install/template/tag-crud/script/crud/info.tpl.php.tpl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/tag-crud/script/crud/update.tpl.php.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/.install/template/tag-crud/script/crud/update.tpl.php.tpl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/tag-crud/script/script.inc.php.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/.install/template/tag-crud/script/script.inc.php.tpl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/tag-database/config/database.inc.php.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/.install/template/tag-database/config/database.inc.php.tpl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/tag-frontend/config/static_version.inc.php.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/.install/template/tag-frontend/config/static_version.inc.php.tpl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/tag-frontend/public/css/define.css.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/.install/template/tag-frontend/public/css/define.css.tpl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/tag-frontend/public/css/reset.css.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/.install/template/tag-frontend/public/css/reset.css.tpl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/tag-frontend/public/css/style.css.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/.install/template/tag-frontend/public/css/style.css.tpl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/tag-frontend/script/dump.php.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/.install/template/tag-frontend/script/dump.php.tpl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/tag-orm/script/orm/generate.php.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/.install/template/tag-orm/script/orm/generate.php.tpl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/tag-orm/script/orm/model.tpl.php.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/.install/template/tag-orm/script/orm/model.tpl.php.tpl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/tag-orm/script/orm/modelbase.tpl.php.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/.install/template/tag-orm/script/orm/modelbase.tpl.php.tpl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/tag-orm/script/orm/table.tpl.php.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/.install/template/tag-orm/script/orm/table.tpl.php.tpl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/tag-orm/script/script.inc.php.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/.install/template/tag-orm/script/script.inc.php.tpl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/tag-orm/src/Http/Paginate.php.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/.install/template/tag-orm/src/Http/Paginate.php.tpl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.install/autoload.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.install/command/base.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.install/command/check.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.install/command/crud.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.install/command/database.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.install/command/front.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.install/command/help.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.install/command/init.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.install/command/orm.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.install/template/tag-base/config/app.inc.php.tpl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.install/template/tag-base/config/routes.inc.php.tpl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.install/template/tag-base/doc/README.md.tpl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.install/template/tag-base/public/css/define.css.tpl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.install/template/tag-base/public/css/reset.css.tpl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.install/template/tag-base/public/css/style.css.tpl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.install/template/tag-base/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.install/template/tag-base/public/index.php.tpl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.install/template/tag-base/src/Http/AuthorizeFreeTrait.php.tpl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.install/template/tag-base/src/Http/AuthorizeRequiredTrait.php.tpl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.install/template/tag-base/src/Http/Controller.php.tpl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.install/template/tag-base/src/Http/Controller/Index.php.tpl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.install/template/tag-base/src/page/404.php.tpl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.install/template/tag-base/src/page/5xx.php.tpl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.install/template/tag-base/src/page/footer.inc.php.tpl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.install/template/tag-base/src/page/header.inc.php.tpl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.install/template/tag-base/src/page/index/index.php.tpl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.install/template/tag-base/src/page/nav.inc.php.tpl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.install/template/tag-crud/script/crud/controller.tpl.php.tpl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.install/template/tag-crud/script/crud/create.tpl.php.tpl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.install/template/tag-crud/script/crud/generate.php.tpl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.install/template/tag-crud/script/crud/index.tpl.php.tpl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.install/template/tag-crud/script/crud/info.tpl.php.tpl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.install/template/tag-crud/script/crud/update.tpl.php.tpl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.install/template/tag-crud/script/script.inc.php.tpl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.install/template/tag-database/config/database.inc.php.tpl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.install/template/tag-frontend/config/static_version.inc.php.tpl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.install/template/tag-frontend/public/css/define.css.tpl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.install/template/tag-frontend/public/css/reset.css.tpl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.install/template/tag-frontend/public/css/style.css.tpl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.install/template/tag-frontend/script/dump.php.tpl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.install/template/tag-orm/script/orm/generate.php.tpl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.install/template/tag-orm/script/orm/model.tpl.php.tpl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.install/template/tag-orm/script/orm/modelbase.tpl.php.tpl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.install/template/tag-orm/script/orm/table.tpl.php.tpl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.install/template/tag-orm/script/script.inc.php.tpl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.install/template/tag-orm/src/Http/Paginate.php.tpl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pls.php" beforeDir="false" afterPath="$PROJECT_DIR$/pls.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +76,6 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/pls.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/.gitignore" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/composer.json" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -171,7 +158,7 @@
       <workItem from="1730013094615" duration="28000" />
       <workItem from="1737384275434" duration="2372000" />
       <workItem from="1737436276432" duration="5174000" />
-      <workItem from="1737460217281" duration="396000" />
+      <workItem from="1737460217281" duration="5230000" />
     </task>
     <servers />
   </component>
