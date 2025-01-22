@@ -4,6 +4,7 @@ namespace LFPhp\Pls;
 use Exception;
 use LFPhp\Logger\Logger;
 use function LFPhp\Func\array_get;
+use function LFPhp\Func\array_push_by_path;
 use function LFPhp\Func\console_color;
 use function LFPhp\Func\get_all_opt;
 use function LFPhp\Func\glob_recursive;
@@ -76,32 +77,31 @@ function pls_get_composer_info($path = ''){
 	return array_get($json, $path);
 }
 
-function pls_update_project_name($new_name){
+function pls_update_project_info($new_name){
 	$new_name = trim(strtolower($new_name));
-	$old_name = pls_get_composer_info('name');
-	if($new_name === $old_name){
-		Logger::warning('new name same as old.');
-		return false;
-	}
 	$json = json_decode(file_get_contents(PLS_PROJECT_ROOT.'/composer.json'), true);
 	$json['name'] = $new_name;
+	$json['type'] = 'project';
+	array_push_by_path($json, 'autoload.psr-4.'.pls_package_name_to_ns($new_name).'\\', 'src/');
 	pls_save_file(PLS_PROJECT_ROOT.'/composer.json', json_encode($json, JSON_UNESCAPED_UNICODE|JSON_PRETTY_PRINT));
 	return true;
 }
 
-function pls_get_project_info(){
-	$package_name = pls_get_composer_info('name');
+function pls_package_name_to_ns($package_name){
 	$ns = explode('/', $package_name);
-	$app_name = join(' ', $ns);
 	foreach($ns as $k => $v){
 		$ns[$k] = underscores_to_pascalcase($v, true);
 	}
-	$app_namespace = join('\\', $ns);
+	return join('\\', $ns);
+}
 
+function pls_get_project_info(){
+	$package_name = pls_get_composer_info('name');
+	$app_namespace = pls_package_name_to_ns($package_name);
 	$app_name_var = str_replace('\\', '', $app_namespace);
 	return [
 		'app_root'      => realpath(PLS_PROJECT_ROOT),
-		'app_name'      => $app_name,
+		'app_name'      => str_replace('/', ' ', $package_name),
 		'app_name_var'  => $app_name_var,
 		'app_namespace' => $app_namespace,
 	];

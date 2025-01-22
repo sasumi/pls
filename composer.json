@@ -2,15 +2,6 @@
 	"name": "lfphp/pls",
 	"description": "plite scaffold",
 	"type": "library",
-	"license": "MIT",
-	"autoload": {
-	},
-	"authors": [
-		{
-			"name": "sasumi",
-			"email": "cnsasumi@gmail.com"
-		}
-	],
 	"require": {
 		"lfphp/plite": "^1.0",
 		"lfphp/logger": "^2.0",
