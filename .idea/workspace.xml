@@ -5,13 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="82cfd0af-8525-48fa-9c83-86977bfa521e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/script/installer/command/reset.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/script/installer/template/tag-base/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/script/installer/autoload.php" beforeDir="false" afterPath="$PROJECT_DIR$/script/installer/autoload.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/script/installer/command/init.php" beforeDir="false" afterPath="$PROJECT_DIR$/script/installer/command/init.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,6 +126,7 @@
       <workItem from="1737384275434" duration="2372000" />
       <workItem from="1737436276432" duration="5174000" />
       <workItem from="1737460217281" duration="8292000" />
+      <workItem from="1737508408047" duration="834000" />
     </task>
     <servers />
   </component>
