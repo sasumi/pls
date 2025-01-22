@@ -22,7 +22,7 @@ Logger::registerGlobal(function($messages, $level, $logger_id, $trace_info){
 Logger::registerGlobal(new FileOutput(PLS_PROJECT_ROOT.'/.runtime/install.log', LoggerLevel::INFO));
 
 $args = get_all_opt();
-Logger::debug('Arguments detected: ', $args);
+Logger::debug('Arguments detected: ', json_encode($args));
 define('DRY_RUN', $args['dry-run']);
 
 $cmd = array_shift($args);
