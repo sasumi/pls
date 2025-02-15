@@ -5,8 +5,7 @@ use LFPhp\Logger\LoggerLevel;
 use LFPhp\Logger\Output\ConsoleOutput;
 use LFPhp\Logger\Output\FileOutput;
 
-define('PLITE_APP_ROOT', dirname(__DIR__));
-include_once __DIR__.'/../vendor/autoload.php';
+include_once __DIR__.'/../bootstrap.php';
 
 Logger::registerGlobal(new ConsoleOutput(), LoggerLevel::DEBUG);
 Logger::registerGlobal(new FileOutput(PLITE_APP_ROOT.'/log/script.error.log'), LoggerLevel::WARNING);

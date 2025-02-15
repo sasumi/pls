@@ -9,8 +9,7 @@
 	},
 	"scripts": {
 		"post-create-project-cmd": [
-			"@php pls.php reset",
-			"@php pls.php base"
+			"@php pls.php reset"
 		]
 	}
 }
