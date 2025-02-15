@@ -231,7 +231,7 @@ function pls_init_file($tag){
 	$file_structs = pls_get_template_project_structure($tag);
 	foreach($file_structs as $dir){
 		if(!is_dir($dir)){
-			pls_mkdir($dir, 0x777, true);
+			pls_mkdir($dir, 0x665, true);
 		}else{
 			Logger::debug('Directory already exists:', realpath($dir));
 		}
