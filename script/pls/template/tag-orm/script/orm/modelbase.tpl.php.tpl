@@ -22,7 +22,7 @@ abstract class ModelBase extends Model {
 	* @return \LFPhp\PDODSN\DSN
 	* @throws \Exception
 	*/
-	public static function getDbDsn($operate_type = self::OP_READ){
+	public static function getDSN($operate_type = self::OP_READ){
 		return new MySQL(get_config('database')['<?=$source_id;?>']);
 	}
 }

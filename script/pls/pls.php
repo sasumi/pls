@@ -29,7 +29,6 @@ define('DRY_RUN', $args['dry-run']);
 $cmd = array_shift($args);
 $all_commands = pls_get_all_commands();
 echo "\n" . str_repeat('=', 40) . "\n" . console_color(' PLite Project Builder ', 'white', 'yellow') . "\n";
-echo "Version: " . InstalledVersions::getVersion('lfphp/pls') . "\n";
 echo "Command example: php " . basename(__FILE__) . ' COMMAND [arguments]', PHP_EOL;
 echo str_repeat("-", 40) . "\n";
 

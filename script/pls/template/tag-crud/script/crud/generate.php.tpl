@@ -70,10 +70,10 @@ foreach($models as $model){
 			if(isset($tmp[$r])){
 				Logger::info('router rule already exists, ignore:'.$r);
 			}else if($r === $model_lowercase.'/*'){
-				$route_patches[] = [$r => $full_controller_class.'::class@*'];
+				$route_patches[] = [$r => $full_controller_class.'@*'];
 			}else{
 				$method = explode('/', $r)[1];
-				$route_patches[] = [$r => $full_controller_class.'::class@'.$method];
+				$route_patches[] = [$r => $full_controller_class.'@'.$method];
 			}
 		}
 		if(!$route_patches){
@@ -196,6 +196,6 @@ function html_render_attribute_element(Attribute $attr, $value_code = ''){
 		case Attribute::TYPE_YEAR:
 			return "<input type=\"year\" $input_name id=\"$input_id\" value=\"$value_code\" $required_attr/>";
 		default:
-			throw new Exception('Attribute type no support'.$attr->type);
+			Logger::warning('Attribute type no support:'.$attr->type);
 	}
 }
