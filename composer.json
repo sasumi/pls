@@ -5,8 +5,8 @@
 	"require": {
 		"lfphp/plite": "^1.0",
 		"lfphp/logger": "^2.0",
-		"lfphp/porm": "^1.0",
-		"ext-json": "*"
+		"ext-json": "*",
+		"lfphp/porm": "^1.0"
 	},
 	"scripts": {
 		"post-create-project-cmd": [
