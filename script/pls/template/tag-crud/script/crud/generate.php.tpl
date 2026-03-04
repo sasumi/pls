@@ -1,7 +1,6 @@
 <?php
 
 use LFPhp\Logger\Logger;
-use LFPhp\Pls\ProjectBuilder;
 use LFPhp\PORM\ORM\Attribute as Attribute;
 use function LFPhp\Func\explode_by;
 use function LFPhp\Func\get_all_opt;
@@ -9,6 +8,7 @@ use function LFPhp\Func\render_php_file;
 use function LFPhp\PLite\get_app_namespace;
 use function LFPhp\PLite\get_app_var_name;
 use function LFPhp\PLite\get_config;
+use function LFPhp\PLite\set_config;
 
 include_once __DIR__.'/../script.inc.php';
 
@@ -70,17 +70,17 @@ foreach($models as $model){
 			if(isset($tmp[$r])){
 				Logger::info('router rule already exists, ignore:'.$r);
 			}else if($r === $model_lowercase.'/*'){
-				$route_patches[] = "'$r' => $full_controller_class::class.'@*',";
+				$route_patches[] = [$r => $full_controller_class.'::class@*'];
 			}else{
 				$method = explode('/', $r)[1];
-				$route_patches[] = "'$r' => $full_controller_class::class.'@$method',";
+				$route_patches[] = [$r => $full_controller_class.'::class@'.$method];
 			}
 		}
 		if(!$route_patches){
 			Logger::info("no routes need to patch:\n", join("\n", $route_patches));
 		} else {
 			Logger::warning("routes to patch:\n", join("\n", $route_patches));
-			ProjectBuilder::addConfigItems(PLITE_CONFIG_PATH.'/routes.inc.php', $route_patches, true);
+			set_config('routes', $route_patches);
 			Logger::warning('route patch success');
 		}
 	}
@@ -115,7 +115,7 @@ foreach($models as $model){
 			$r = $model_lowercase.'/'.$type;
 			$desc = $full_model_class::getModelDesc();
 			Logger::info('nav added', $r, $desc.''.$title);
-			$nav_lines[] = "'$r' => '{$desc}{$title}',";
+			$nav_lines[] =  [$r => $desc.$title];
 		}
 
 		Logger::info("\n");
@@ -141,7 +141,7 @@ foreach($models as $model){
 }
 
 if($nav_lines){
-	ProjectBuilder::addConfigItems(PLITE_PAGE_PATH.'/nav.inc.php', $nav_lines);
+	set_config('nav', $nav_lines);
 } else {
 	Logger::debug('No navs detected');
 }
