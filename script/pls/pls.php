@@ -33,11 +33,7 @@ echo "Version: " . InstalledVersions::getVersion('lfphp/pls') . "\n";
 echo "Command example: php " . basename(__FILE__) . ' COMMAND [arguments]', PHP_EOL;
 echo str_repeat("-", 40) . "\n";
 
-// 如果是通过 composer 创建项目，设置项目名称为当前目录名，并执行基础命令
-if ($cmd == 'create-project') {
-	pls_update_project_info(basename(PLS_PROJECT_ROOT));
-	pls_run_cmd('base');
-} else if (!$all_commands[$cmd]) {
+if (!$all_commands[$cmd]) {
 	pls_run_cmd('help');
 } else {
 	pls_run_cmd($cmd);

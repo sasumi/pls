@@ -3,14 +3,14 @@
 	"description": "plite scaffold",
 	"type": "library",
 	"require": {
-		"lfphp/plite": "^1.0",
-		"lfphp/logger": "^2.0",
+		"lfphp/plite": "*",
+		"lfphp/logger": "*",
 		"ext-json": "*",
 		"lfphp/porm": "^1.0"
 	},
 	"scripts": {
 		"post-create-project-cmd": [
-			"@php script/pls/pls.php init"
+			"@php script/pls/pls.php"
 		]
 	}
 }
