@@ -5,11 +5,12 @@
 	"require": {
 		"lfphp/plite": "^1.0",
 		"lfphp/logger": "^2.0",
+		"lfphp/porm": "^1.0",
 		"ext-json": "*"
 	},
 	"scripts": {
 		"post-create-project-cmd": [
-			"@php pls.php base"
+			"@php script/pls/pls.php init"
 		]
 	}
 }

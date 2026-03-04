@@ -127,17 +127,7 @@ function pls_get_all_database_config(){
 }
 
 function pls_get_all_commands(){
-	$fs = [
-		PLS_INSTALLER_ROOT.'/command/reset.php',
-		PLS_INSTALLER_ROOT.'/command/help.php',
-		PLS_INSTALLER_ROOT.'/command/check.php',
-		PLS_INSTALLER_ROOT.'/command/init.php',
-		PLS_INSTALLER_ROOT.'/command/base.php',
-		PLS_INSTALLER_ROOT.'/command/orm.php',
-		PLS_INSTALLER_ROOT.'/command/crud.php',
-		PLS_INSTALLER_ROOT.'/command/database.php',
-		PLS_INSTALLER_ROOT.'/command/front.php',
-	];
+	$fs = glob(__DIR__.'/command/*.php');
 	$cmd_list = [];
 	foreach($fs as $f){
 		$tmp = include $f;
