@@ -13,10 +13,9 @@ use function LFPhp\Func\get_all_opt;
 /**
  * Plite Framework Starter
  */
-include_once __DIR__ . '/vendor/autoload.php';
-include_once __DIR__ . '/script/pls/autoload.php';
+include_once __DIR__ . '/../../vendor/autoload.php';
+include_once __DIR__ . '/autoload.php';
 
-die('asdfasdf');
 Logger::registerGlobal(function ($messages, $level, $logger_id, $trace_info) {
 	[$fore_color, $bg_color] = ConsoleOutput::$COLOR_MAP[$level] ?: [];
 	echo console_color(Logger::combineMessages($messages), $fore_color, $bg_color) . PHP_EOL;
